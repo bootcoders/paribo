@@ -1,0 +1,12 @@
+// box-shadow
+
+@mixin box-shadow($top, $left, $blur, $color) {
+    -webkit-box-shadow:$top $left $blur $color;
+    -moz-box-shadow:$top $left $blur $color;
+    box-shadow:$top $left $blur $color;
+}
+
+
+@mixin  box-shadow {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 15%);
+}

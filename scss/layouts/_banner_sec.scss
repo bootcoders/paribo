@@ -1,0 +1,105 @@
+.banner_sec {
+    &--ads {
+        .banner-ads-sm {
+            display: block;
+            overflow: hidden;
+            border-radius: 5px;
+            @include box-shadow;
+            &:nth-child(1) {
+                margin-bottom: 15px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    &--carousel {
+        overflow: hidden;
+        border-radius: 5px;
+        @include box-shadow;
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        .owl-carousel {
+            height: 100%;
+            .owl-stage-outer {
+                height: 100%;
+                .owl-stage {
+                    height: 100%;
+                    .owl-item {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .owl-theme {
+            .owl-dots {
+                margin-top: 0;
+                position: absolute;
+                left: 0%;
+                bottom: 10px;
+                width: 100%;
+                .owl-dot {
+                    span {
+                        margin: 3px 5px;
+                        background-color: $gray-500;
+                    }
+                    &.active {
+                        span {
+                            background: $primary;
+                        }
+                    }
+                    &:hover {
+                        span {
+                            background: $primary;
+                        }
+                    }
+                }
+            }
+            .owl-nav {
+                position: absolute;
+                top: 28%;
+                left: 0;
+                display: flex;
+                justify-content: space-between;
+                padding: 0 5px;
+                width: 100%;
+                [class*="owl-"] {
+                    height: 100%;
+                    padding: 50px 0 !important;
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in;
+                    &:hover{
+                        background-color: transparent;
+                    }
+                    i {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 36px;
+                        height: 36px;
+                        border-radius: 50%;
+                        background-color: $dark-blue;
+                        color: $white;
+                        font-size: 16px;
+                        @include box-shadow;
+                    }
+                }
+                .owl-next{
+                    &:hover{
+                        opacity: 1 !important;
+                    }
+                }
+                .owl-prev{
+                    &:hover{
+                        opacity: 1 !important;
+                    }
+                }
+            }
+        }
+    }
+    
+}

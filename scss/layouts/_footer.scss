@@ -1,0 +1,182 @@
+.footer {
+    &--links {
+        background-color: $dark-blue;
+        padding: 3rem 0;
+        &__card {
+            h3 {
+                font-size: 14px;
+                font-weight: $font-500;
+                color: $white;
+            }
+            ul {
+                li {
+                    display: block;
+                    a {
+                        display: block;
+                        color: darken($white, 15%);
+                        font-size: 12px;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &--storeInfo {
+        background-color: $dark-blue;
+        padding: 2rem 0;
+        border-top: 1px solid #3a4553;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .footer-logo {
+            margin-right: 80px;
+            a {
+                color: $white;
+                text-transform: uppercase;
+                font-size: 24px;
+                font-weight: $font-500;
+            }
+        }
+        &__btn {
+            display: flex;
+            .btn {
+                width: 150px;
+                font-size: 12px;
+                text-transform: uppercase;
+                height: 36px;
+                margin: 0 8px;
+                i {
+                    margin-right: 5px;
+                }
+                img {
+                    margin-right: 5px;
+                }
+
+                &.btn-outline-light {
+                    border-color: #848688;
+                    color: #ccc;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+            }
+            .change-lang {
+                position: relative;
+                display: block;
+                z-index: 9;
+
+                .all-lang {
+                    position: absolute;
+                    left: 7px;
+                    top: 36px;
+                    background-color: $white;
+                    padding: 15px;
+                    border-radius: 5px;
+                    min-width: 200px;
+                    z-index: 9999;
+                    display: none;
+
+                    p {
+                        font-size: 12px;
+                        margin-bottom: 5px;
+                    }
+                    .current-lang {
+                        margin-bottom: 10px;
+                        padding-bottom: 10px;
+                        border-bottom: 1px solid $gray-200;
+                    }
+                    .all-langs {
+                        .custom-control {
+                            margin-bottom: 10px;
+                        }
+                        .custom-control-label {
+                            color: $gray-500;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                &:hover {
+                    .all-lang {
+                        display: block;
+                    }
+                }
+            }
+
+            .change-curreny {
+                position: relative;
+                .currency-list {
+                    position: absolute;
+                    left: 7px;
+                    top: 36px;
+                    background-color: $white;
+                    padding: 10px 0;
+                    border-radius: 5px;
+                    width: 100px;
+                    z-index: 9999;
+                    display: none;
+                    
+                    .btn {
+                        width: 100%;
+                        padding: 8px 0;
+                        margin: 0;
+                        border-radius: 0;
+                        &:hover {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+                }
+                &:hover {
+                    .currency-list {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+    &--storeServices {
+        padding: 2rem 0;
+        background-color: $dark-blue-2;
+
+        &__card {
+            padding-right: 50px;
+            a {
+                font-size: 11px;
+                line-height: 1.2;
+                color: darken($white, 30%);
+                display: block;
+                margin-bottom: 0.8rem;
+                strong {
+                    display: block;
+                    color: $white;
+                    font-size: 12px;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .footer-copyright {
+            text-align: center;
+            margin-top: 30px;
+            a {
+                font-size: 12px;
+                color: $white;
+                display: inline-block;
+                margin-right: 10px;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            p {
+                display: inline-block;
+                color: darken($white, 30%);
+                font-size: 12px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

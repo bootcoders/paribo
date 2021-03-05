@@ -1,0 +1,70 @@
+.popular_cat {
+    .popular_cat-item {
+        display: block;
+        background-color: $gray-300;
+        width: 133px;
+        height: 133px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 5px solid $gray-200;
+        margin-bottom: 1.2rem;
+        transition: border-color 0.3s ease-in;
+        &:hover {
+            border-color: $primary;
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            object-position: center;
+        }
+    }
+    .owl-theme {
+        .owl-dots {
+            margin-top: 0;
+            position: absolute;
+            left: 0%;
+            bottom: 10px;
+            width: 100%;
+            .owl-dot {
+                span {
+                    margin: 3px 5px;
+                    background-color: $gray-500;
+                }
+                &.active {
+                    span {
+                        background: $primary;
+                    }
+                }
+                &:hover {
+                    span {
+                        background: $primary;
+                    }
+                }
+            }
+        }
+        .owl-nav {
+            position: absolute;
+            top: 35%;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            [class*="owl-"] {
+                color: $gray-400;
+                font-size: 50px;
+                &:hover {
+                    background-color: transparent;
+                    color: $primary;
+                }
+            }
+            .owl-prev{
+                margin-left: -10px;
+            }
+            .owl-next{
+                margin-right: -10px;
+            }
+        }
+    }
+}

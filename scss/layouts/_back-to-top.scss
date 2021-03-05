@@ -1,0 +1,21 @@
+.back-to-top{
+    width: 100%;
+    text-align: center;
+    
+    h3{
+        font-size: 12px;
+        font-weight: $font-400;
+        margin-bottom: 0;
+        a{
+            color: $white;
+            text-transform: uppercase;
+            padding: 15px;
+            display: block;
+            background-color:$light-blue;
+            transition: background-color 0.3s ease-in;
+            &:hover{
+                background-color: lighten($light-blue, 6%);
+            }
+        }
+    }
+}
