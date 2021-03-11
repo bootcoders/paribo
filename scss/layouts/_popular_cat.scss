@@ -1,4 +1,11 @@
 .popular_cat {
+    
+    .popular_cat--items{
+        background-color: $white;
+        border-radius: 5px;
+        overflow: hidden;
+        padding: 15px 10px 0 10px;
+    }
     .popular_cat-item {
         display: block;
         background-color: $gray-300;
@@ -6,7 +13,7 @@
         height: 133px;
         border-radius: 50%;
         overflow: hidden;
-        border: 5px solid $gray-200;
+        border: 3px solid $gray-200;
         margin-bottom: 1.2rem;
         transition: border-color 0.3s ease-in;
         &:hover {

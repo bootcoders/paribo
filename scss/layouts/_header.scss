@@ -2,12 +2,28 @@
     // Header Top
     &--top {
         background-color: $white-blue;
-        padding: 8px 0;
+        padding: 3px 0;
         // Left
         &__left {
             ul {
                 li {
                     display: inline-block;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        width: 1px;
+                        height: 10px;
+                        background-color: $gray-600;
+                        display: block;
+                        position: absolute;
+                        right: 5px;
+                        top: 6px;
+                    }
+                    &:last-child {
+                        &::after {
+                            display: none;
+                        }
+                    }
                     a {
                         margin-right: 15px;
                         font-size: 12px;
@@ -17,6 +33,11 @@
                         }
                         i {
                             margin-right: 5px;
+                        }
+                        img {
+                            border: 1px solid #107517;
+                            padding: 2px;
+                            border-radius: 3px;
                         }
                     }
                 }
@@ -28,12 +49,15 @@
             justify-content: flex-end;
             align-items: center;
             .merchnat-btn {
-                margin-right: 50px;
+                margin-right: auto;
                 .btn {
-                    font-size: 10px;
+                    font-size: 12px;
                     text-transform: uppercase;
-                    font-weight: $font-600;
-                    padding: 2px 5px;
+                    font-weight: $font-400;
+                    padding: 2px 10px;
+                    background: $light-blue;
+                    color: $white;
+                    border-color: $light-blue;
                     &:hover {
                         background-color: $primary;
                         border-color: $primary;
@@ -42,6 +66,17 @@
                 }
             }
             .ship-to {
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 1px;
+                    height: 12px;
+                    background-color: #6c757d;
+                    display: block;
+                    position: absolute;
+                    right: -12px;
+                    top: 2px;
+                }
                 .btn {
                     display: flex;
                     align-items: center;
@@ -59,10 +94,11 @@
                 }
             }
             .google-playstore {
-                margin-left: 20px;
+                margin-left: 15px;
 
                 .btn {
                     padding: 0;
+                    margin-left: 5px;
                 }
             }
         }
@@ -72,7 +108,7 @@
     &--main {
         background-color: $white;
         box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-        padding: 20px 0;
+        padding: 20px 0 0 0;
 
         // Logo & Categories
         &__logo {
@@ -95,159 +131,71 @@
                     }
                 }
             }
-            // main-categories
-            .main-categories {
-                position: relative;
-                .btn {
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-weight: $font-500;
-                    height: 42px;
-                    padding: 10px 10px;
-                    @include box-shadow;
-                    display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    &.btn-primary {
-                        color: $white;
-                    }
-                    i {
-                        margin: 0 5px;
-                        &.fa-angle-down {
-                            font-size: 18px;
-                        }
-                    }
-                }
-                .categories-dropdown {
-                    position: absolute;
-                    min-width: 350px;
-                    z-index: 999;
-                    background-color: $white;
-                    border: 1px solid #ddd;
-                    display: none;
-
-                    ul {
-                        position: relative;
-                        li {
-                            display: block;
-
-                            a {
-                                display: flex;
-                                justify-content: space-between;
-                                align-items: center;
-                                padding: 8px 15px;
-                                color: $gray-500;
-                                font-size: 12px;
-                                line-height: 1.1;
-                                transition: box-shadow 0.3s ease-in;
-                                i {
-                                    transition: all 0.3s ease-in;
-                                    font-size: 15px;
-                                }
-                                &:hover {
-                                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-                                    i {
-                                        margin-right: -3px;
-                                    }
-                                }
-                            }
-
-                            .categories-sub-dropdown {
-                                position: absolute;
-                                left: 100%;
-                                top: -1px;
-                                margin-left: -2px;
-                                min-width: 500px;
-                                height: 100%;
-                                background: #fff;
-                                box-shadow: 0 1px 5px #e7e7e7;
-                                -moz-border-radius: 4px;
-                                -webkit-border-radius: 4px;
-                                border-radius: 4px;
-                                border: 1px solid #e7e7e7;
-                                padding: 30px;
-                                display: none;
-                                h3 {
-                                    font-size: 14px;
-                                    font-weight: $font-500;
-                                    color: $dark-blue;
-                                }
-                                ul {
-                                    li {
-                                        display: block;
-                                        a {
-                                            display: block;
-                                            padding: 8px 0;
-                                            transition: color 0.3s ease-in;
-                                            &:hover {
-                                                box-shadow: none;
-                                                color: $primary;
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                // Hover
-                &:hover {
-                    .categories-dropdown {
-                        display: block;
-                        ul {
-                            li {
-                                &:hover {
-                                    .categories-sub-dropdown {
-                                        display: block;
-                                    }
-                                }
-                                a.hoverActive {
-                                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-                                    i {
-                                        margin-right: -3px;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
         }
-
+        // main-categories
+        
         // Header
         &__search {
             form {
                 display: flex;
                 align-items: center;
+                border-radius: 5px;
+                border: 2px solid transparent;
+                &.add-border{
+                    border-color: $yellow;
+                }
+                .search-dropdown{
+                    .btn{
+                        background-color: $gray-200;
+                        display: flex;
+                        align-items: center;
+                        font-size: 13px;
+                        height: 40px;
+                        border-width: 1px 0 1px 1px;
+                        border-style: solid;
+                        border-color: #ddd;
+                        color: $gray-500;
+                        border-radius: 3px 0 0 3px;
+                        white-space: nowrap;
+                        i{
+                            margin-left: 5px;
+                        }
+                    }
+                    position: relative;
+                    .nav-search-dropdown{
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                        z-index: 9999;
+                        display: none;
+                    }
+                }
                 .search-box {
                     display: flex;
                     align-items: center;
-                    border: 1px solid #ddd;
-                    padding: 5px 10px;
-                    height: 42px;
-                    border-radius: 5px;
                     width: 90%;
-                    margin-right: 10px;
-
                     .form-control {
-                        border: none;
                         font-weight: $font-400;
                         font-size: 14px;
                         font-family: $font-family;
+                        height: 40px;
+                        border-radius: 0;
+                        border-width: 1px 0 1px 0;
                     }
                 }
-
-                .btn {
-                    text-transform: uppercase;
-                    font-size: 14px;
-                    font-weight: $font-500;
-                    @include box-shadow;
-                    height: 42px;
-                    &.btn-primary {
-                        color: $white;
+                .search-btn{
+                    .btn {
+                        text-transform: uppercase;
+                        font-size: 16px;
+                        font-weight: $font-500;
+                        height: 40px;
+                        border-radius: 0 3px 3px 0;
+                        &.btn-primary {
+                            color: $white;
+                        }
                     }
                 }
+                
             }
         }
 
@@ -281,5 +229,77 @@
                 }
             }
         }
+
+        .main_nav{
+            display: block;
+
+            .main-ul{
+                position: relative;
+                >li{
+                    display: inline-block;
+                    margin-right: 20px;
+                    &:first-child{
+                        >a{
+                            color: $yellow;
+                            font-weight: $font-700;
+                        }
+                    }
+                    &:hover{
+                        .mega_menu{
+                            display: block;
+
+                            
+                        }
+                    }
+                    >a{
+                        display: block;
+                        color: $black;
+                        padding: 20px 0;
+                    }
+
+                    .mega_menu{
+                        position: absolute;
+                        left: 0;
+                        top: 100%;
+                        background-color: $white;
+                        width: 100%;
+                        height: 70vh;
+                        z-index: 9999;
+                        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+                        display: none;
+                        border-radius: 0 0 5px 5px;
+                        &--inner{
+                            padding: 30px;
+                        }
+                        &--card{
+                            margin-bottom: 20px;
+                            h3{
+                                font-size: 14px;
+                                line-height: 1.2;
+                                margin-bottom: 0px;
+                                opacity: 0.8;
+                            }
+                            ul{
+                                li{
+                                    display: block;
+                                    a{
+                                        display: block;
+                                        font-size: 13px;
+                                        color: $black;
+                                        opacity: 0.8;
+                                        &:hover{
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
+
+

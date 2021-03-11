@@ -1,8 +1,15 @@
 .product_sec{
+    background-color: $white;
+    border-radius: 5px;
+   
     &--card{
-        @include box-shadow;
         border-radius: 5px;
         display: block;
+        transition: box-shadow 0.3 ease-in, transform 0.3s ease-in;
+        &:hover{
+            @include box-shadow;
+            transform: scale(1.01);
+        }
         &__img{
             height: 175px;
             padding: 10px 0;

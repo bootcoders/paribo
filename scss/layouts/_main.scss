@@ -1,9 +1,6 @@
 .main {
     margin: 1rem 0;
     &--inner {
-        background-color: $white;
-        padding: 1rem 1.5rem;
-        border-radius: 5px;
         .row {
             margin-left: -8px;
             margin-right: -8px;
@@ -14,12 +11,12 @@
         }
 
         .section__head{
-            background-color: $gray-300;
+            background-color: $gray-700;
             padding:15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-radius: 5px;
+            border-radius: 5px 5px 0 0;
 
             h3{
                 font-size: 20px;
