@@ -10221,6 +10221,26 @@ body {
 .header--main__search form .search-dropdown .btn i {
   margin-left: 5px;
 }
+.header--main__search form .search-dropdown .scrollable-dropdown {
+  position: absolute;
+  left: 0;
+  top: 40px;
+  z-index: 9999;
+  background-color: #fff;
+  width: 200px;
+  border: 1px solid #ddd;
+  display: none;
+  max-height: 350px;
+  overflow: auto;
+  padding: 10px;
+}
+.header--main__search form .search-dropdown .scrollable-dropdown a {
+  color: #282828;
+  font-size: 13px;
+}
+.header--main__search form .search-dropdown .scrollable-dropdown.show {
+  display: block;
+}
 .header--main__search form .search-dropdown .nav-search-dropdown {
   position: absolute;
   left: 0;

@@ -162,6 +162,26 @@
                         }
                     }
                     position: relative;
+                    .scrollable-dropdown{
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                        z-index: 9999;
+                        background-color: #fff;
+                        width: 200px;
+                        border: 1px solid #ddd;
+                        display: none;
+                        max-height: 350px;
+                        overflow: auto;
+                        padding: 10px;
+                        a{
+                            color: $black;
+                            font-size: 13px;
+                        }
+                        &.show{
+                            display: block;
+                        }
+                    }
                     .nav-search-dropdown{
                         position: absolute;
                         left: 0;

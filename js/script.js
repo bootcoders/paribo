@@ -64,26 +64,27 @@ $(document).ready(function () {
         $('html, body').animate({ scrollTop: 0 }, '300');
     });
 
+
+    // Search focus border
     $('.search-box .form-control').bind('blur', function () {
         $('form').removeClass("add-border");
     });
     $('.search-box .form-control').bind('focus', function () {
         $('form').addClass('add-border');
     });
-
-    $('.search-dropdown').find('option').click(function (e) {
-        e.preventDefault();
-        var param = $(this).attr("href").replace("#", "");
-        var concept = $(this).text();
-        $('.search-panel span#search_concept').text(concept);
-        $('.input-group #search_param').val(param);
-    });
-
+    
+//    Search category Dropdown
     $(".btn-open-search-catagory").click(function(e){
         e.preventDefault();
-        $("select.nav-search-dropdown").trigger("click");
-    })
+        $(".scrollable-dropdown").toggleClass('show');
+        $('.scrollable-dropdown').find('a').click(function (e) {
+            e.preventDefault();
+            var concept = $(this).text();
+            $('.btn-open-search-catagory .cat_item').text(concept);
+            $(this).parents(".scrollable-dropdown").removeClass("show");
+        });
+    });
+    
     
 
 });
-
