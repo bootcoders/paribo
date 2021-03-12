@@ -10316,6 +10316,9 @@ body {
 .header--main .main_nav .main-ul > li:hover .mega_menu {
   display: block;
 }
+.header--main .main_nav .main-ul > li:hover .mega_menu_cat {
+  display: flex;
+}
 .header--main .main_nav .main-ul > li > a {
   display: block;
   color: #282828;
@@ -10356,6 +10359,44 @@ body {
 }
 .header--main .main_nav .main-ul > li .mega_menu--card ul li a:hover {
   opacity: 1;
+}
+.header--main .main_nav .main-ul > li .mega_menu--flex {
+  display: flex;
+}
+.header--main .main_nav .main-ul > li .mega_menu_cat {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background-color: #fff;
+  width: 100%;
+  height: 70vh;
+  z-index: 9999;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  display: flex;
+  border-radius: 0 0 5px 5px;
+}
+.header--main .main_nav .main-ul > li .mega_menu_cat .main_cat-ul {
+  height: 70vh;
+  background-color: #f8f9fa;
+  width: 250px;
+  overflow: auto;
+  position: relative;
+}
+.header--main .main_nav .main-ul > li .mega_menu_cat .main_cat-ul > li > a {
+  display: block;
+  color: #282828;
+  padding: 5px 10px;
+  opacity: 0.8;
+  font-size: 13px;
+  line-height: 1.2;
+}
+.header--main .main_nav .main-ul > li .mega_menu_cat .main_cat-ul > li > a:hover {
+  background-color: #f3f3f3;
+  font-weight: 500;
+  opacity: 1;
+}
+.header--main .main_nav .main-ul > li .mega_menu_cat .cat_sub_menu_all [class*=nav-] {
+  display: none;
 }
 
 .main {

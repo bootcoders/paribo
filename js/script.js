@@ -84,7 +84,28 @@ $(document).ready(function () {
             $(this).parents(".scrollable-dropdown").removeClass("show");
         });
     });
+    $('.main_cat-ul li').each(function(i) {
+        $(this).attr('class','nav-'+i);
+        i++;
+    });
     
-    
+    $('.cat_sub_menu_all .mega_menu_cat_submenu').each(function(i) {
+        $(this).attr('class','nav-'+i);
+        i++;
+    });
 
+    $(".main_cat-ul li").mouseover(function(){
+        var theClass = $(this).attr('class');
+        $(".cat_sub_menu_all").children('.'+ theClass +'').css({
+            "display": "block"
+        })
+    });
+    $(".main_cat-ul li").mouseout(function(){
+        var theClass = $(this).attr('class');
+        
+        $(".cat_sub_menu_all").children('.'+ theClass +'').css({
+            "display": "none"
+        })
+    });
+   
 });
