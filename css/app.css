@@ -10055,8 +10055,8 @@ body {
   right: 50px;
   bottom: 50px;
   background-color: #f68b1e;
-  width: 40px;
-  height: 40px;
+  width: 43px;
+  height: 43px;
   border-radius: 50%;
   display: none;
   align-items: center;
@@ -10114,18 +10114,13 @@ body {
 }
 .header--top__left ul li a img {
   border: 1px solid #107517;
-  padding: 2px;
+  padding: 1px;
   border-radius: 3px;
 }
-.header--top__right {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+.header--top__middle {
+  text-align: center;
 }
-.header--top__right .merchnat-btn {
-  margin-right: auto;
-}
-.header--top__right .merchnat-btn .btn {
+.header--top__middle .merchnat-btn .btn {
   font-size: 12px;
   text-transform: uppercase;
   font-weight: 400;
@@ -10134,10 +10129,15 @@ body {
   color: #fff;
   border-color: #37475A;
 }
-.header--top__right .merchnat-btn .btn:hover {
+.header--top__middle .merchnat-btn .btn:hover {
   background-color: #f68b1e;
   border-color: #f68b1e;
   color: #fff;
+}
+.header--top__right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 .header--top__right .ship-to {
   position: relative;
@@ -10299,7 +10299,7 @@ body {
   font-size: 14px;
   font-weight: 500;
   height: 42px;
-  background-color: #232F3E;
+  background-color: #37475A;
   color: #fff;
 }
 .header--main__shop-info .btn.btn-wholesale:hover {
@@ -10461,7 +10461,7 @@ body {
   height: 70vh;
   z-index: 9999;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  display: flex;
+  display: none;
   border-radius: 0 0 5px 5px;
 }
 .header--main .main_nav .main-ul > li .mega_menu_cat .main_cat-ul {
@@ -10511,6 +10511,7 @@ body {
   font-size: 20px;
   margin-bottom: 0;
   font-weight: 500;
+  text-transform: uppercase;
 }
 .main--inner .section__head a {
   text-transform: uppercase;
@@ -11060,6 +11061,9 @@ body {
 }
 
 .product_sec {
+  border-radius: 5px;
+}
+.product_sec__inner {
   background-color: #fff;
   border-radius: 5px;
 }

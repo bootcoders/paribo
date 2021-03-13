@@ -43,20 +43,17 @@
                         }
                         img {
                             border: 1px solid #107517;
-                            padding: 2px;
+                            padding: 1px;
                             border-radius: 3px;
                         }
                     }
                 }
             }
         }
-        // Right
-        &__right {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+        &__middle{
+            text-align: center;
             .merchnat-btn {
-                margin-right: auto;
+               
                 .btn {
                     font-size: 12px;
                     text-transform: uppercase;
@@ -72,6 +69,13 @@
                     }
                 }
             }
+        }
+        // Right
+        &__right {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            
             .ship-to {
                 position: relative;
                 &::after {
@@ -246,11 +250,11 @@
                     font-size: 14px;
                     font-weight: $font-500;
                     height: 42px;
-                    background-color: $dark-blue;
+                    background-color: $light-blue;
                     color: $white;
                     &:hover {
                         color: $white;
-                        background-color: darken($dark-blue, 20%);
+                        background-color: darken($dark-blue, 50%);
                     }
                 }
 
@@ -426,7 +430,7 @@
                         height: 70vh;
                         z-index: 9999;
                         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-                        display: flex;
+                        display: none;
                         border-radius: 0 0 5px 5px;
                         .main_cat-ul {
                             height: 70vh;

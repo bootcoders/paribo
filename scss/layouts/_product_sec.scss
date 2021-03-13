@@ -1,7 +1,9 @@
 .product_sec{
-    background-color: $white;
     border-radius: 5px;
-   
+    &__inner{
+        background-color: $white;
+        border-radius: 5px;
+    }
     &--card{
         border-radius: 5px;
         display: block;

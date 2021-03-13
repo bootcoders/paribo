@@ -119,8 +119,10 @@ $(document).ready(function () {
             $(this).parents(".scrollable-dropdown").removeClass("show");
         });
     });
+
+
     $('.main_cat-ul li').each(function (i) {
-        $(this).attr('class', 'nav-' + i);
+        $(this).addClass('nav-' + i);
         i++;
     });
 
@@ -133,18 +135,17 @@ $(document).ready(function () {
     // Cat Mega Menu
    
 
-    $(".main_cat-ul li").mouseover(function () {
+    $(".main_cat-ul li").hover(function () {
         var theClass = $(this).attr('class');
-        $(".cat_sub_menu_all").find("."+ theClass +"").css({
-            "display": "block"
-        })
+        var getClass = $(".cat_sub_menu_all").children(""+ theClass +"");
+        var divClass = this.className.match(getClass);
+
+        console.log(theClass);
+        console.log(getClass);
+        console.log(divClass);
+        
     });
-    $(".main_cat-ul li").mouseout(function () {
-        var theClass = $(this).attr('class');
-        $(".cat_sub_menu_all").find("."+ theClass +"").css({
-            "display": "none"
-        })
-    });
+    
 
 
 
