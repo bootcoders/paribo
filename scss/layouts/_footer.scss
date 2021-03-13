@@ -140,11 +140,11 @@
         .subscibe-section{
             display: flex;
             align-items: center;
-            margin-left: auto;
+            justify-content: center;
             h3{
                 font-size: 18px;
                 color: $white;
-                margin: 0 20px;
+                margin: 0 20px 0 0;
                 text-transform: uppercase;
             }
             form{
@@ -153,6 +153,7 @@
                 .form-control{
                     border-radius: 5px 0 0 5px;
                     height: 40px;
+                    width: 300px;
                 }
 
                 .btn{
@@ -162,8 +163,14 @@
                     font-weight: $font-500;
                     border-radius: 0 5px 5px 0;
                     height: 40px;
-                    color: $white;
+                    color: $black;
                 }
+            }
+        }
+        .secure-badge{
+            margin-top: 40px;
+            img{
+                width: 100%;
             }
         }
     }
@@ -209,11 +216,26 @@
                 font-size: 12px;
                 margin-bottom: 0;
             }
-            .secure-badge{
-                width: 150px;
+            ul{
+                text-align: right;
                 margin-left: auto;
-                img{
-                    width: 100%;
+                li{
+                    display: inline-block;
+                    a{
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 20px;
+                        background-color: $gray-200;
+                        color: $black;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        &:hover{
+                            text-decoration: none;
+                            background-color: $orange;
+                            color: $white;
+                        }
+                    }
                 }
             }
         }

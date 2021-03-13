@@ -10073,6 +10073,13 @@ body {
   display: flex;
 }
 
+.header.fixed-header {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}
 .header--top {
   background-color: #D1E8FF;
   padding: 3px 0;
@@ -10299,6 +10306,88 @@ body {
   color: #fff;
   background-color: black;
 }
+.header--main__shop-info .btn-login {
+  position: relative;
+}
+.header--main__shop-info .btn-login .login_dropdown {
+  position: absolute;
+  left: 50%;
+  top: 45px;
+  margin-left: -100px;
+  z-index: 9999;
+  background-color: #fff;
+  width: 200px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  display: none;
+}
+.header--main__shop-info .btn-login .login_dropdown .btn-yellow {
+  width: 80%;
+  text-transform: uppercase;
+  color: #fff;
+  background: #f68b1e;
+  margin: 20px 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+}
+.header--main__shop-info .btn-login .login_dropdown .create_account {
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  text-transform: uppercase;
+  position: relative;
+}
+.header--main__shop-info .btn-login .login_dropdown .create_account span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  top: -15px;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.8;
+  text-align: center;
+}
+.header--main__shop-info .btn-login .login_dropdown .create_account::before {
+  content: "";
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  top: -2px;
+  margin-left: -15px;
+}
+.header--main__shop-info .btn-login .login_dropdown .create_account .btn {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+}
+.header--main__shop-info .btn-login .login_dropdown ul li {
+  display: block;
+}
+.header--main__shop-info .btn-login .login_dropdown ul li a {
+  display: block;
+  color: #282828;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.header--main__shop-info .btn-login .login_dropdown ul li a:hover {
+  background-color: #f8f9fa;
+}
+.header--main__shop-info .btn-login .login_dropdown ul li a i {
+  margin-right: 5px;
+}
+.header--main__shop-info .btn-login:hover .login_dropdown {
+  display: block;
+}
 .header--main .main_nav {
   display: block;
 }
@@ -10372,7 +10461,7 @@ body {
   height: 70vh;
   z-index: 9999;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  display: flex;
+  display: none;
   border-radius: 0 0 5px 5px;
 }
 .header--main .main_nav .main-ul > li .mega_menu_cat .main_cat-ul {
@@ -10598,12 +10687,12 @@ body {
 .footer--storeInfo .subscibe-section {
   display: flex;
   align-items: center;
-  margin-left: auto;
+  justify-content: center;
 }
 .footer--storeInfo .subscibe-section h3 {
   font-size: 18px;
   color: #fff;
-  margin: 0 20px;
+  margin: 0 20px 0 0;
   text-transform: uppercase;
 }
 .footer--storeInfo .subscibe-section form {
@@ -10613,6 +10702,7 @@ body {
 .footer--storeInfo .subscibe-section form .form-control {
   border-radius: 5px 0 0 5px;
   height: 40px;
+  width: 300px;
 }
 .footer--storeInfo .subscibe-section form .btn {
   background-color: #ffc107;
@@ -10621,7 +10711,13 @@ body {
   font-weight: 500;
   border-radius: 0 5px 5px 0;
   height: 40px;
-  color: #fff;
+  color: #282828;
+}
+.footer--storeInfo .secure-badge {
+  margin-top: 40px;
+}
+.footer--storeInfo .secure-badge img {
+  width: 100%;
 }
 .footer--storeServices {
   padding: 2rem 0;
@@ -10666,18 +10762,35 @@ body {
   font-size: 12px;
   margin-bottom: 0;
 }
-.footer--storeServices .footer-copyright .secure-badge {
-  width: 150px;
+.footer--storeServices .footer-copyright ul {
+  text-align: right;
   margin-left: auto;
 }
-.footer--storeServices .footer-copyright .secure-badge img {
-  width: 100%;
+.footer--storeServices .footer-copyright ul li {
+  display: inline-block;
+}
+.footer--storeServices .footer-copyright ul li a {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+  color: #282828;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer--storeServices .footer-copyright ul li a:hover {
+  text-decoration: none;
+  background-color: #f68b1e;
+  color: #fff;
 }
 
 .banner_sec--ads .banner-ads-sm {
   display: block;
   overflow: hidden;
   border-radius: 5px;
+  min-height: 195px;
+  background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
 .banner_sec--ads .banner-ads-sm:nth-child(1) {
@@ -10774,12 +10887,62 @@ body {
   margin-right: 0.8rem;
 }
 .shop_feature--card__icon img {
-  width: 36px;
+  width: 36px !important;
 }
 .shop_feature--card__title h3 {
   font-size: 16px;
   color: #282828;
   margin-bottom: 0;
+}
+.shop_feature .owl-theme .owl-stage-outer {
+  padding-bottom: 10px;
+}
+.shop_feature .owl-theme .owl-nav {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  width: 100%;
+}
+.shop_feature .owl-theme .owl-nav [class*=owl-] {
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+.shop_feature .owl-theme .owl-nav [class*=owl-]:hover {
+  background-color: transparent;
+}
+.shop_feature .owl-theme .owl-nav [class*=owl-] i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #D4D2D4;
+  color: #282828;
+  font-size: 16px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.shop_feature .owl-theme .owl-nav [class*=owl-] i:hover {
+  background-color: #232F3E;
+  color: #fff;
+}
+.shop_feature .owl-theme .owl-nav .owl-next {
+  position: absolute;
+  right: -15px;
+  top: -58px;
+}
+.shop_feature .owl-theme .owl-nav .owl-prev {
+  position: absolute;
+  left: -15px;
+  top: -58px;
+}
+.shop_feature:hover .owl-theme .owl-nav {
+  opacity: 1;
 }
 
 .popular_cat .popular_cat--items {
@@ -10813,13 +10976,18 @@ body {
 .popular_cat .owl-theme .owl-dots {
   margin-top: 0;
   position: absolute;
-  left: 0%;
-  bottom: 10px;
+  left: 0;
+  bottom: 15px;
   width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  z-index: 999;
 }
 .popular_cat .owl-theme .owl-dots .owl-dot span {
-  margin: 3px 5px;
-  background-color: #666;
+  margin: 0;
+  background-color: #f3f3f3;
+  width: 100%;
+  height: 5px;
 }
 .popular_cat .owl-theme .owl-dots .owl-dot.active span {
   background: #f68b1e;

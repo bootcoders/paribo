@@ -4,6 +4,8 @@
             display: block;
             overflow: hidden;
             border-radius: 5px;
+            min-height: 195px;
+            background-color: $white;
             @include box-shadow;
             &:nth-child(1) {
                 margin-bottom: 15px;
