@@ -10461,7 +10461,7 @@ body {
   height: 70vh;
   z-index: 9999;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  display: none;
+  display: flex;
   border-radius: 0 0 5px 5px;
 }
 .header--main .main_nav .main-ul > li .mega_menu_cat .main_cat-ul {

@@ -129,20 +129,21 @@ $(document).ready(function () {
         i++;
     });
 
-    $(".main_cat-ul li").on("mouseover", function () {
+
+    // Cat Mega Menu
+   
+
+    $(".main_cat-ul li").mouseover(function () {
         var theClass = $(this).attr('class');
-        var divClass = $(this).hasClass(".cat_sub_menu_all").find('.' + theClass + '');
-        $(".cat_sub_menu_all").find('.' + theClass + '').addClass('show');
-    }).on("mouseleave", function () {
-        $(".cat_sub_menu_all").find('.' + theClass + '').not(this).removeClass("show");
-        divClass.addClass("show")
+        $(".cat_sub_menu_all").find("."+ theClass +"").css({
+            "display": "block"
+        })
     });
-
-    $(".main_cat-ul li").hover(function () {
+    $(".main_cat-ul li").mouseout(function () {
         var theClass = $(this).attr('class');
-        if ($(this).hasClass("." + theClass + "")) {
-
-        }
+        $(".cat_sub_menu_all").find("."+ theClass +"").css({
+            "display": "none"
+        })
     });
 
 
