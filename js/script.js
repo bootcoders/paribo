@@ -42,8 +42,8 @@ $(document).ready(function () {
         loop: true,
         margin: 15,
         nav: true,
-        dots: true,
-        slideBy:7,
+        dots: false,
+        scrollbarType: "scroll",
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {

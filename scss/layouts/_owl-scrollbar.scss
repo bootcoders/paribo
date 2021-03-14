@@ -1,0 +1,22 @@
+.owl-scrollbar {
+    margin-top: 10px;
+    border-radius: 10px;
+    height: 6px;
+    width: 100%;
+    background: $gray-300;
+    position: relative;
+    margin-bottom: 10px;
+    .owl-scroll-handle {
+        height: 6px;
+        width: 15px;
+        display: inline-block;
+        background: $gray-700;
+        position: absolute;
+        top: 0px;
+        left: -1px;
+        &:hover {
+            transition: transform .2s ease-in-out;
+        }
+        
+    }
+}

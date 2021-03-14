@@ -10898,6 +10898,28 @@ body {
   border-color: #f68b1e;
 }
 
+.owl-scrollbar {
+  margin-top: 10px;
+  border-radius: 10px;
+  height: 6px;
+  width: 100%;
+  background: #f5f5f5;
+  position: relative;
+  margin-bottom: 10px;
+}
+.owl-scrollbar .owl-scroll-handle {
+  height: 6px;
+  width: 15px;
+  display: inline-block;
+  background: #D4D2D4;
+  position: absolute;
+  top: 0px;
+  left: -1px;
+}
+.owl-scrollbar .owl-scroll-handle:hover {
+  transition: transform 0.2s ease-in-out;
+}
+
 .banner_sec--ads .banner-ads-sm {
   display: block;
   overflow: hidden;
@@ -11108,28 +11130,6 @@ body {
   height: 100%;
   -o-object-position: center;
      object-position: center;
-}
-.popular_cat .owl-theme .owl-dots {
-  margin-top: 0;
-  position: absolute;
-  left: 0;
-  bottom: 15px;
-  width: 100%;
-  height: 5px;
-  border-radius: 5px;
-  z-index: 999;
-}
-.popular_cat .owl-theme .owl-dots .owl-dot span {
-  margin: 0;
-  background-color: #f3f3f3;
-  width: 100%;
-  height: 5px;
-}
-.popular_cat .owl-theme .owl-dots .owl-dot.active span {
-  background: #f68b1e;
-}
-.popular_cat .owl-theme .owl-dots .owl-dot:hover span {
-  background: #f68b1e;
 }
 .popular_cat .owl-theme .owl-nav {
   position: absolute;
