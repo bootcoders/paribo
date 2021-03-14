@@ -100,6 +100,8 @@ $(document).ready(function () {
     });
 
 
+
+
     // Search focus border
     $('.search-box .form-control').bind('blur', function () {
         $('form').removeClass("add-border");
@@ -120,6 +122,16 @@ $(document).ready(function () {
         });
     });
 
+    // PRoduct box Same Height
+    var maxHeight = 0;
+
+    $(".product_sec--card").each(function () {
+        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
+    });
+
+    $(".product_sec--card").height(maxHeight);
+
+    // Mega Menu Cat
 
     $('.main_cat-ul li').each(function (i) {
         $(this).addClass('nav-' + i);
@@ -146,6 +158,9 @@ $(document).ready(function () {
         
     });
     
+
+
+
 
 
 

@@ -1,0 +1,21 @@
+.pagination-sec{
+    .pagination--inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h3{
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: $font-600;
+        }
+
+        .page-link{
+            &:hover {
+                z-index: 2;
+                color: $white;
+                background-color: $orange;
+                border-color: $orange;
+            }
+        }
+    }
+}
