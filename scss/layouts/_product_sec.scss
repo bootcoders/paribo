@@ -61,4 +61,18 @@
             justify-content: space-between;
         }
     }
+    &--brand{
+        .product_sec--card{
+            &__img{
+                margin-bottom: 0;
+            }
+            &__title{
+                padding:0 15px 15px 15px;
+                text-align: center;
+                h3{
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
 }

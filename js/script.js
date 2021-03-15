@@ -122,15 +122,7 @@ $(document).ready(function () {
         });
     });
 
-    // PRoduct box Same Height
-    var maxHeight = 0;
-
-    $(".product_sec--card").each(function () {
-        if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
-    });
-
-    $(".product_sec--card").height(maxHeight);
-
+    
     // Mega Menu Cat
 
     $('.main_cat-ul li').each(function (i) {
