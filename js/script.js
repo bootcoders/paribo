@@ -57,6 +57,27 @@ $(document).ready(function () {
             }
         }
     });
+     // Popular Category
+     $('#flash-categories').owlCarousel({
+        loop: true,
+        margin: 5,
+        nav: true,
+        dots: false,
+        scrollbarType: "scroll",
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 8
+            }
+        }
+    });
+    
     // Popular Category scrollbar
     var dot_item = $(".popular_cat--items .owl-dots button").length;
     var single_item = 100 / dot_item;
@@ -153,6 +174,10 @@ $(document).ready(function () {
 
 
 
+
+
+    // Flash sale timerr
+    $('.flash_sale').attr('data-date', dateText);
 
 
 

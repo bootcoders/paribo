@@ -6,6 +6,8 @@
 @import './popular_search';
 @import './pagination-sec';
 @import './owl-scrollbar';
+@import './flash-sale-timer';
+@import './live_offer';
 
 
 // Home page
@@ -19,3 +21,8 @@
 
 // Brand Page
 @import './official-store';
+
+
+// Flash page
+@import './flash-sale-rules';
+@import './flash-categories-item';
