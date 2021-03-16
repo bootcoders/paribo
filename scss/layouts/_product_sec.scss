@@ -8,6 +8,7 @@
     &--card{
         border-radius: 5px;
         display: block;
+        margin-bottom: 15px;
         transition: box-shadow 0.3 ease-in, transform 0.3s ease-in;
         &:hover{
             @include box-shadow;

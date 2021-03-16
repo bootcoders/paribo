@@ -27,6 +27,8 @@
             object-position: center;
         }
     }
+
+
     .owl-theme {
         .owl-nav {
             position: absolute;
@@ -51,4 +53,13 @@
             }
         }
     }
+
+    .owl-scrollbar{
+        opacity: 0;
+     }
+     &:hover{
+         .owl-scrollbar{
+            opacity: 1;
+         }
+     }
 }

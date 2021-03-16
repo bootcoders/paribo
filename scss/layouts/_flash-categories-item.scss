@@ -1,53 +1,62 @@
-.category-items-all{
+.category-items-all {
     padding: 0 20px;
     overflow: hidden;
-    
-.owl-theme {
-    .owl-nav {
-        position: absolute;
-        top: 30%;
-        left: 0;
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        [class*="owl-"] {
-            color: $gray-400;
-            font-size: 50px;
-            &:hover {
-                background-color: transparent;
-                color: $primary;
+    #flash-categories{
+        padding-bottom: 20px;
+    }
+    .owl-theme {
+        .owl-nav {
+            position: absolute;
+            top: 30%;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            [class*="owl-"] {
+                color: $gray-400;
+                font-size: 50px;
+                &:hover {
+                    background-color: transparent;
+                    color: $primary;
+                }
+            }
+            .owl-prev {
+                margin-left: -20px;
+            }
+            .owl-next {
+                margin-right: -20px;
             }
         }
-        .owl-prev{
-            margin-left: -20px;
-        }
-        .owl-next{
-            margin-right: -20px;
+    }
+    .owl-scrollbar{
+       opacity: 0;
+    }
+    &:hover{
+        .owl-scrollbar{
+            opacity: 1;
         }
     }
 }
-}
 
-.flash-categories-item{
+.flash-categories-item {
     display: block;
     text-align: center;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
     padding: 15px;
     margin-bottom: 5px;
     border-radius: 5px;
-    height: 120px;
-    &-img{
-        height:65px;
-        img{
+    height: 135px;
+    &-img {
+        height: 65px;
+        img {
             width: 100%;
             transition: transform 0.2s ease-in-out 0s;
             height: 100%;
             object-fit: contain;
-            
         }
     }
-    
-    h3{
+
+    h3 {
         font-size: 14px;
         font-weight: $font-500;
         color: $black;
@@ -55,11 +64,12 @@
         margin-top: 8px;
         transition: transform 0.2s ease-in-out 0s;
     }
-    &:hover{
-        img{
+    &:hover {
+        @include box-shadow-light;
+        img {
             transform: scale3d(1.01, 1.01, 1.01);
         }
-        h3{
+        h3 {
             transform: scale3d(1.01, 1.01, 1.01);
         }
     }

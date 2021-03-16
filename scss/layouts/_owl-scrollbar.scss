@@ -1,11 +1,11 @@
 .owl-scrollbar {
-    margin-top: 10px;
     border-radius: 10px;
     height: 8px;
     width: 100%;
     background: $gray-300;
-    position: relative;
-    margin-bottom: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
     .owl-scroll-handle {
         height: 8px;
         width: 15px;

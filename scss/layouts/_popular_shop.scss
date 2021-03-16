@@ -1,0 +1,75 @@
+.popular_shop {
+    border-radius: 5px;
+    overflow: hidden;
+    .popular_shops {
+        padding: 20px;
+    }
+    .popular_shop-single{
+        &:last-child{
+            margin-bottom: -15px;
+        }
+    }
+
+    &--name {
+        height: 320px;
+        background-color: #f7f7f7;
+        border-radius: 5px;
+        padding: 30px;
+        &_logo {
+            height: 200px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+        &_title {
+            text-align: center;
+            h3 {
+                text-transform: uppercase;
+                font-size: 24px;
+                margin-top: 20px;
+            }
+        }
+    }
+    &--featured {
+        &-category {
+            background-color: #f7f7f7;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 153px;
+            margin-bottom: 15px;
+            text-align: center;
+            transition: box-shadow 0.3s ease-in-out;
+
+            &-img {
+                height: 90px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: transform 0.2s ease-in-out 0s;
+                }
+            }
+            h3 {
+                text-transform: uppercase;
+                font-size: 16px;
+                margin-top: 10px;
+                color: $black;
+                transition: transform 0.2s ease-in-out 0s;
+            }
+            &:hover {
+                @include box-shadow-light;
+                img {
+                    transform: scale3d(1.01, 1.01, 1.01);
+                }
+                h3 {
+                    transform: scale3d(1.01, 1.01, 1.01);
+                }
+            }
+        }
+    }
+}

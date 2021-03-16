@@ -1,4 +1,8 @@
 $(document).ready(function () {
+     // 
+     $(function(){
+        $('.shop_name--shop').mixitup();
+    });
     // Home Page Banner ads Slider
     $('#home-banner').owlCarousel({
         loop: true,
@@ -73,7 +77,7 @@ $(document).ready(function () {
                 items: 1
             },
             1000: {
-                items: 8
+                items: 7
             }
         }
     });
@@ -180,6 +184,6 @@ $(document).ready(function () {
     $('.flash_sale').attr('data-date', dateText);
 
 
-
+   
 
 });
