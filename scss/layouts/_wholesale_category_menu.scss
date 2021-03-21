@@ -1,0 +1,81 @@
+.wholesale_category_menu{
+    background-color: $white;
+    border-radius: 5px;
+    padding:17px 0;
+    position: relative;
+    min-height: 345px;
+    @include box-shadow;
+    &--big {
+        min-height: 460px;
+    }
+    h3 {
+        font-size: 18px;
+        text-transform: uppercase;
+        padding: 5px 30px;
+        margin: 0 0 10px 0;
+    }
+    ul {
+        > li {
+            display: block;
+
+            > a {
+                display: flex;
+                justify-content: space-between;
+                color: $black;
+                padding: 5px 30px;
+                font-size: 12px;
+                line-height: 1.2;
+                &:hover {
+                    color: $primary;
+                }
+            }
+
+            .wholesale_category__megamenu {
+                position: absolute;
+                left: 100%;
+                top: 0;
+                min-width: 800px;
+                background-color: $white;
+                border-radius: 5px;
+                padding: 20px;
+                z-index: 9999;
+                border: 1px solid #ddd;
+                height: 100%;
+                display: none;
+                ul {
+                    margin-bottom: 20px;
+                }
+                a {
+                    padding: 5px 0;
+                    color: #75757a;
+                    font-size: 0.75rem;
+                    line-height: 1.2;
+                    &:hover {
+                        color: $black;
+                    }
+                }
+
+                h4 {
+                    font-size: 0.75rem;
+                    color: $black;
+                    text-transform: uppercase;
+                    font-weight: $font-500;
+                    border-bottom: 1px solid #ddd;
+                    padding-bottom: 8px;
+                }
+            }
+            &:hover {
+                .wholesale_category__megamenu {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .btn-link{
+        font-size: 14px;
+        padding-left: 30px;
+    }
+
+
+}

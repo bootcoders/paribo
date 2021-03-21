@@ -19,6 +19,7 @@ $font-900:900;
 // colors
 $black:#282828;
 $yellow-200:#E8EEF5;
+$yellow-300:#FEF4EE;
 $orange:#f68b1e;
 $light-blue:#37475A;
 $dark-blue:#232F3E;
@@ -26,6 +27,9 @@ $dark-blue-2:#131A22;
 $white-blue:#D1E8FF;
 $red: #AD0000;
 $pink:#EA5675;
+$blue:#02186E;
+$blue-dark:#010F47;
+$blue-2:#1996E6;
 // Gray colors
 $gray-200:#f3f3f3;
 $gray-300:#f5f5f5;
@@ -41,5 +45,5 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1200px
+  xl: 1250px
 ) !default;

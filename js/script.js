@@ -1,7 +1,10 @@
 $(document).ready(function () {
-     // 
-     $(function(){
+    // 
+    $(function () {
         $('.shop_name--shop').mixitup();
+    });
+    $(function () {
+        $('.global-popular--shop .row').mixitup();
     });
     // Home Page Banner ads Slider
     $('#home-banner').owlCarousel({
@@ -41,6 +44,7 @@ $(document).ready(function () {
             }
         }
     });
+
     // Popular Category
     $('#popular-category').owlCarousel({
         loop: true,
@@ -61,8 +65,9 @@ $(document).ready(function () {
             }
         }
     });
-     // Popular Category
-     $('#flash-categories').owlCarousel({
+
+    // flash-categories
+    $('#flash-categories').owlCarousel({
         loop: true,
         margin: 5,
         nav: true,
@@ -81,13 +86,167 @@ $(document).ready(function () {
             }
         }
     });
-    
-    // Popular Category scrollbar
-    var dot_item = $(".popular_cat--items .owl-dots button").length;
-    var single_item = 100 / dot_item;
-    $(".popular_cat--items .owl-dots button").css({
-        "width": single_item+"%",
+
+    // avi_shop_name
+    $('#avi_shop_name').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        dots: false,
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+
+    // Global button slider 
+    $('#global-popular-slider').owlCarousel({
+        loop: false,
+        margin: 0,
+        nav: true,
+        dots: false,
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 6
+            }
+        }
+    });
+
+
+    // sub-category
+    $('#sub-category').owlCarousel({
+        loop: true,
+        margin: 5,
+        nav: true,
+        dots: false,
+        scrollbarType: "scroll",
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 6
+            }
+        }
+    });
+
+    // Global button slider 
+    var pro_sl = $('.product_has_slider');
+    pro_sl.on('initialized.owl.carousel changed.owl.carousel', function (e) {
+        if (!e.namespace) {
+            return;
+        }
+        var carousel = e.relatedTarget;
+        $('.counter').text(carousel.relative(carousel.current()) + 1 + '/' + carousel.items().length);
+    }).owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: false,
+        dots: false,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    });
+    $('.play').on('click', function () {
+        $(this).parents(".all_product--card__imgs").children(pro_sl).trigger('play.owl.autoplay', [2000]);
+
+        $(this).hide();
+        $(this).siblings(".stop").show();
     })
+    $('.stop').on('click', function () {
+        $(this).parents(".all_product--card__imgs").children(pro_sl).trigger('stop.owl.autoplay');
+        $(this).hide();
+        $(this).siblings(".play").show();
+    });
+
+
+    // premium_rel
+    $('#premium_rel').owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: true,
+        dots: false,
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+
+    // product_top_cat_slider
+    $('#product_top_cat_slider').owlCarousel({
+        loop: false,
+        margin: 0,
+        nav: true,
+        dots: false,
+        scrollbarType: "scroll",
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 12
+            }
+        }
+    });
+    // Popular Category campain
+    $('#popular-category-campain').owlCarousel({
+        loop: false,
+        margin: 15,
+        nav: true,
+        dots: false,
+        scrollbarType: "scroll",
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 7
+            }
+        }
+    });
     // Header Stiky
     $(window).scroll(function () {
         if ($(window).scrollTop() >= 10) {
@@ -147,7 +306,7 @@ $(document).ready(function () {
         });
     });
 
-    
+
     // Mega Menu Cat
 
     $('.main_cat-ul li').each(function (i) {
@@ -159,31 +318,30 @@ $(document).ready(function () {
         $(this).attr('class', 'nav-' + i);
         i++;
     });
-
+    // Sidebar Toggle
+    $(".has_toggle a.product_leftbar--card_head").click(function () {
+        $('i', this).toggleClass("far fa-angle-down far fa-angle-up");
+        $(this).siblings(".product_leftbar--card__content").slideToggle(500);
+        return false;
+    });
 
     // Cat Mega Menu
-   
+
 
     $(".main_cat-ul li").hover(function () {
         var theClass = $(this).attr('class');
-        var getClass = $(".cat_sub_menu_all").children(""+ theClass +"");
+        var getClass = $(".cat_sub_menu_all").children("" + theClass + "");
         var divClass = this.className.match(getClass);
 
         console.log(theClass);
         console.log(getClass);
         console.log(divClass);
-        
+
     });
-    
-
-
-
-
-
     // Flash sale timerr
     $('.flash_sale').attr('data-date', dateText);
 
 
-   
-
 });
+
+

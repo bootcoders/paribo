@@ -4,7 +4,7 @@
             display: block;
             overflow: hidden;
             border-radius: 5px;
-            min-height: 195px;
+            height: 195px;
             background-color: $white;
             @include box-shadow;
             &:nth-child(1) {
@@ -12,8 +12,17 @@
             }
             img {
                 width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.2s ease-in-out 0s;
             }
-
+            
+            &:hover {
+                img {
+                    transform: scale3d(1.01, 1.01, 1.01);
+                }
+                
+            }
             &--content{
                 padding: 20px;
                 background-color: $orange;
@@ -123,6 +132,42 @@
                     &:hover{
                         opacity: 1 !important;
                     }
+                }
+            }
+        }
+    }
+
+    &.wholesale_banner_sec{
+        .banner_sec--carousel {
+            overflow: hidden;
+            border-radius: 5px;
+            @include box-shadow;
+            height: 380px;
+            
+            
+        }
+        .banner_sec--ads {
+            .banner-ads-sm {
+                height: 243px;
+            }
+        }
+        .wholesale_banners{
+            margin-top: 15px;
+            .wholesale_banner{
+                display: block;
+                overflow: hidden;
+                background-color: $white;
+                border-radius: 5px;
+                @include box-shadow;
+                img{
+                    width: 100%;
+                    transition: transform 0.2s ease-in-out 0s;
+                }
+                &:hover {
+                    img {
+                        transform: scale3d(1.01, 1.01, 1.01);
+                    }
+                    
                 }
             }
         }

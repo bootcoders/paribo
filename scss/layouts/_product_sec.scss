@@ -5,10 +5,12 @@
         background-color: $white;
         border-radius: 5px;
     }
+    
     &--card{
         border-radius: 5px;
         display: block;
         margin-bottom: 15px;
+       
         transition: box-shadow 0.3 ease-in, transform 0.3s ease-in;
         &:hover{
             @include box-shadow;
@@ -62,6 +64,12 @@
             justify-content: space-between;
         }
     }
+    &--inner-flash{
+        padding: 0 20px;
+        .product_sec--card{
+            background-color: #F7F7F7;
+        }
+    }
     &--brand{
         .product_sec--card{
             &__img{
@@ -74,6 +82,13 @@
                     text-transform: uppercase;
                 }
             }
+        }
+    }
+    &.product_se-item_bg{
+        .product_sec--card{
+            background-color: $white;
+            display: block;
+            
         }
     }
 }

@@ -47,6 +47,7 @@
                         i {
                             margin-right: 2px;
                             color: #f68b1e;
+                            font-weight: 600;
                         }
                         img {
                             border: 1px solid #107517;
@@ -70,8 +71,8 @@
                     color: $white;
                     border-color: #5774e6;
                     &:hover {
-                        background-color: darken(#5774e6, 10%);;
-                        border-color: darken(#5774e6, 10%);;
+                        background-color: $primary;
+                        border-color: $primary;
                         color: $white;
                     }
                 }

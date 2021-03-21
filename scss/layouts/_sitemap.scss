@@ -1,0 +1,35 @@
+.categories-sitemap{
+    padding: 0;
+    overflow: visible;
+    .flash-categories-item{
+        display: block;
+        background-color: $white;
+        position: relative;
+        z-index: 9999;
+    }
+    .owl-item{
+        z-index: 999999;
+    }
+    .owl-theme .owl-nav {
+        position: absolute;
+        top: 20%;
+        z-index: -1;
+    }
+}
+
+
+.site-map{
+    border-radius: 5px;
+    .sitemap_inner{
+        padding: 20px;
+        a{
+            display: block;
+            color: $black;
+            opacity: 0.8;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+}

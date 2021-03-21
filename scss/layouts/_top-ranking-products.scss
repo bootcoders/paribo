@@ -1,0 +1,72 @@
+.top-ranking-products {
+    border-radius: 5px;
+    .top-rank--inner {
+        padding: 0 20px 30px 20px;
+    }
+
+    .top-rank-products {
+        h3 {
+            font-size: 16px;
+            font-weight: $font-500;
+            margin-bottom: 20px;
+        }
+    }
+    .top-rank-product-list {
+        border-right: 1px solid #ddd;
+    }
+    .top-rank-product-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .rank-level {
+            width: 24px;
+            height: 20px;
+            display: block;
+            background-color: $primary;
+            color: $white;
+            font-size: 12px;
+            font-weight: $font-500;
+            text-align: center;
+            margin-right: 15px;
+            position: relative;
+            &::before {
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 5px solid $primary;
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -5px;
+            }
+        }
+        .top-rank-products-img{
+            border-radius: 5px;
+            overflow: hidden;
+            width: 80px;
+            height: 80px;
+            img{
+                width: 100%;
+            }
+        }
+        .top-rank-product-text{
+            padding-left: 15px;
+            color: $black;
+            h3{
+                margin: 0;
+            }
+            span{
+                display: block;
+                font-size: 12px;
+                line-height: 1.2;
+                opacity: 0.7;
+            }
+        }
+    }
+}
