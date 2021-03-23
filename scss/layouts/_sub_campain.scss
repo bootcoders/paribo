@@ -30,6 +30,30 @@
             font-size: 14px;
         }
     }
+
+    .nav-tabs{
+        border: none;
+        .nav-link {
+            margin-bottom: 0;
+            border: none;
+            border-radius: 5px;
+            background-color: $gray-600;
+            width: 120px;
+            text-transform: uppercase;
+            color: $white;
+            font-size: 12px;
+            font-weight: $font-500;
+            text-align: center;
+            margin-right: 10px;
+            letter-spacing: 0.5px;
+            &.active{
+                background-color: $primary;
+                border-color: $primary;
+            }
+        }
+    }
+     
+
     &_page_result{
         p{
            margin: 0;
@@ -37,7 +61,23 @@
         }
     }
 }
-
+.sub_campain_tabs{
+    .popular_search{
+        margin: 0;
+        background-color: $gray-400;
+    }
+    .shop_name--shop{
+        padding: 20px 0;
+        .shop_name--shop__card{
+            background-color: $white;
+        }
+    }
+    .product_sec--brand{
+        .product_sec--card{
+            background-color: $white;
+        }
+    }
+}
 .product_sec--campain{
     .product_sec--card{
         background-color: $white;

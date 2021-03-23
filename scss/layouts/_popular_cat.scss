@@ -1,6 +1,5 @@
 .popular_cat {
-    
-    .popular_cat--items{
+    .popular_cat--items {
         background-color: $white;
         border-radius: 5px;
         overflow: hidden;
@@ -8,14 +7,28 @@
     }
     .popular_cat-item {
         display: block;
-        background-color: $gray-300;
-        width: 133px;
-        height: 133px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 3px solid $gray-200;
         margin-bottom: 1.2rem;
-        transition: border-color 0.3s ease-in;
+        &_img {
+            background-color: $gray-300;
+            width: 133px;
+            height: 133px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid $gray-200;
+            transition: border-color 0.3s ease-in;
+            position: relative;
+            margin: auto;
+        }
+        &_name {
+            h3 {
+                display: block;
+                text-align: center;
+                font-size: 14px;
+                font-weight: $font-500;
+                color: $black;
+                margin: 15px 0;
+            }
+        }
         &:hover {
             border-color: $primary;
         }
@@ -27,9 +40,6 @@
             object-position: center;
         }
     }
-
-   
-
 
     .owl-theme {
         .owl-nav {
@@ -47,26 +57,26 @@
                     color: $primary;
                 }
             }
-            .owl-prev{
+            .owl-prev {
                 margin-left: -10px;
             }
-            .owl-next{
+            .owl-next {
                 margin-right: -10px;
             }
         }
     }
 
-    .owl-scrollbar{
+    .owl-scrollbar {
         opacity: 0;
-     }
-     &:hover{
-         .owl-scrollbar{
+    }
+    &:hover {
+        .owl-scrollbar {
             opacity: 1;
-         }
-     }
+        }
+    }
 
-     &--subcampain{
-        .popular_cat--items{
+    &--subcampain {
+        .popular_cat--items {
             background-color: transparent;
         }
         .owl-theme {

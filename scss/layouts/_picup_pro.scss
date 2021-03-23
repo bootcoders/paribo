@@ -1,0 +1,106 @@
+.picup_pro{
+    &--card{
+        height:210px;
+        background-color: $blue-3;
+        display: block;
+        overflow: hidden;
+        border-radius: 3px;
+        position: relative;
+        margin-bottom: 15px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.2s ease-in-out 0s;
+        }
+        h3{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            margin-bottom: 0;
+            background-color:rgba(67, 79, 91, 1);
+            color: $white;
+            font-size: 14px;
+            font-weight: $font-400;
+            padding: 10px;
+            width: 100%;
+            
+        }
+        .picUp-offer{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: $primary;
+            color: $white;
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            line-height: 1.2;
+            padding-top: 8px;
+            strong{
+                display: block;
+                font-size: 14px;
+            }
+        }
+        &:hover{
+            img{
+                transform: scale3d(1.01, 1.01, 1.01);
+            }
+            
+        }
+    }
+    &--name{
+        .btn{
+            width: 120px;
+            height: 40px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: $font-500;
+            letter-spacing: 0.5px;
+            background-color: $white-blue;
+            margin-right: 5px;
+
+            &.active{
+                background-color: $primary;
+                color: $white;
+            }
+            &:hover{
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+    .popular_search{
+        background-color: #e9e6e6;
+        margin: 15px 0;
+    }
+    .picup_pro_items{
+        .picup_pro--card{
+            height: 140px;
+
+            .picUp-offer{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: $primary;
+                color: $white;
+                position: absolute;
+                right: 15px;
+                top: 10px;
+                display: block;
+                text-align: center;
+                font-size: 10px;
+                line-height: 1.2;
+                padding-top: 6px;
+                strong{
+                    display: block;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

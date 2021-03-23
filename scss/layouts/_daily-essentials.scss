@@ -1,0 +1,204 @@
+.banner_sec_daily {
+    &--carousel {
+        border-radius: 5px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            @include box-shadow;
+            border-radius: 5px;
+        }
+    }
+    .owl-carousel .owl-stage-outer {
+        height: 300px;
+        .owl-stage {
+            height: 100%;
+            .owl-item {
+                height: 100%;
+                a {
+                    height: 100%;
+                    display: block;
+                }
+            }
+        }
+    }
+    .owl-theme .owl-dots .owl-dot span {
+        width: 42px;
+        height: 6px;
+        background: $gray-700;
+    }
+    .owl-theme .owl-dots .owl-dot.active span,
+    .owl-theme .owl-dots .owl-dot:hover span {
+        background: $primary;
+    }
+}
+
+// product_daily
+.product_daily {
+    &--item {
+        text-align: center;
+        display: block;
+        margin-bottom: 30px;
+        color: $black;
+        h3 {
+            font-size: 16px;
+            margin-top: 15px;
+            transition: transform 0.2s ease-in-out 0s;
+        }
+        img {
+            transition: transform 0.2s ease-in-out 0s;
+        }
+        &:hover {
+            color: $black;
+        }
+
+        &:hover {
+            img {
+                transform: scale3d(1.01, 1.01, 1.01);
+            }
+            h3 {
+                transform: scale3d(1.01, 1.01, 1.01);
+            }
+        }
+    }
+}
+
+.offer_item {
+    display: block;
+    img {
+        width: 100%;
+    }
+}
+
+.top_selling_groceries {
+    .owl-carousel .owl-stage {
+        padding-left: 0 !important;
+    }
+
+    .top_selling_groceries_item {
+        a {
+            display: block;
+            overflow: hidden;
+            border-radius: 5px;
+            height: 200px;
+            position: relative;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.2s ease-in-out 0s;
+            }
+
+            h3 {
+                position: absolute;
+                left: 30px;
+                top: 60px;
+                color: $black;
+                font-size: 32px;
+                z-index: 999;
+                font-weight: $font-500;
+            }
+            &:hover {
+                img {
+                    transform: scale3d(1.01, 1.01, 1.01);
+                }
+            }
+        }
+    }
+    .top_selling_groceries_item_group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-align: center;
+        .top_selling_groceries_item-sm {
+            background-color: $white-blue;
+            display: block;
+            border-radius: 5px;
+            margin: 10px 0;
+            width: 24%;
+            height: 120px;
+            color: $black;
+
+            .item_img {
+                height: 80px;
+                padding: 10px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    transition: transform 0.2s ease-in-out 0s;
+                }
+            }
+            span {
+                display: block;
+                max-width: 60%;
+                margin: auto;
+                font-size: 13px;
+                line-height: 1.2;
+                text-align: center;
+            }
+            &:hover {
+                img {
+                    transform: scale3d(1.01, 1.01, 1.01);
+                }
+            }
+        }
+    }
+    .owl-theme {
+        .owl-stage-outer {
+            padding-bottom: 10px;
+        }
+        .owl-nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 5px;
+            width: 100%;
+            [class*="owl-"] {
+                height: 100%;
+                opacity: 1;
+                transition: opacity 0.3s ease-in;
+                &:hover {
+                    background-color: transparent;
+                }
+                i {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $gray-400;
+                    color: $black;
+                    font-size: 24px;
+                    @include box-shadow;
+                    &:hover {
+                        background-color: $primary;
+                        color: $white;
+                    }
+                }
+            }
+            .owl-next {
+                position: absolute;
+                right: -24px;
+                top: -200px;
+            }
+            .owl-prev {
+                position: absolute;
+                left: -24px;
+                top: -200px;
+            }
+        }
+    }
+}
+
+// product_sec--topSale
+.product_sec--topSale{
+    .product_sec--card{
+        background-color: $white;
+    }
+}

@@ -1,5 +1,6 @@
 .main {
     margin: 1rem 0;
+    padding-top: 165px;
     &--inner {
         .row {
             margin-left: -8px;
@@ -45,7 +46,16 @@
                 margin-bottom: 0;
                 color: $black;
             }
+            &-2{
+                padding:0 0 15px 0;
+                h3{
+                    font-size: 28px;
+                    text-transform: uppercase;
+                    font-weight: $font-600;
+                }
+            }
         }
+       
 
         // full_banner
         .banner_section {
