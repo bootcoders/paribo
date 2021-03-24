@@ -25,6 +25,7 @@
             font-weight: $font-400;
             padding: 10px;
             width: 100%;
+            transition: transform 0.2s ease-in-out 0s;
             
         }
         .picUp-offer{
@@ -48,6 +49,9 @@
         }
         &:hover{
             img{
+                transform: scale3d(1.01, 1.01, 1.01);
+            }
+            h3{
                 transform: scale3d(1.01, 1.01, 1.01);
             }
             

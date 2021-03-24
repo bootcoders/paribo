@@ -124,6 +124,27 @@ $(document).ready(function () {
             }
         }
     });
+     // Home Page Banner ads Slider
+     $('#shipment_slider').owlCarousel({
+        loop: true,
+        margin: 15,
+        nav: true,
+        dots: false,
+        scrollbarType: "scroll",
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 3
+            },
+            600: {
+                items: 5
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+
 
     // Popular Category
     $('#popular-category').owlCarousel({

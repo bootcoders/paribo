@@ -53,7 +53,7 @@
                     font-size: 16px;
                     @include box-shadow;
                     &:hover {
-                        background-color: $dark-blue;
+                        background-color: $primary;
                         color: $white;
                     }
                 }
