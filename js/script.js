@@ -170,10 +170,9 @@ $(document).ready(function () {
     // flash-categories
     $('#flash-categories').owlCarousel({
         loop: true,
-        margin: 5,
+        margin: 2,
         nav: true,
         dots: false,
-        scrollbarType: "scroll",
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
@@ -183,7 +182,7 @@ $(document).ready(function () {
                 items: 1
             },
             1000: {
-                items: 7
+                items: 5
             }
         }
     });
@@ -569,6 +568,15 @@ $(document).ready(function () {
             });
         })
     });
+
+    // Header fixed on scroll
+    $(window).scroll(function(){
+        var sticky = $('.header--middle'),
+            scroll = $(window).scrollTop();
+      
+        if (scroll >= 100) sticky.addClass('fixed');
+        else sticky.removeClass('fixed');
+      });
 
     // Flash sale timerr
     $('.flash_sale').attr('data-date', dateText);

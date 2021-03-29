@@ -30,7 +30,9 @@
             }
         }
         &:hover {
-            border-color: $primary;
+            .popular_cat-item_img{
+                border-color: $primary;
+            }
         }
 
         img {
@@ -75,6 +77,9 @@
         }
     }
 
+
+
+
     &--subcampain {
         .popular_cat--items {
             background-color: transparent;
@@ -84,6 +89,7 @@
                 position: absolute;
                 bottom: 0;
                 left: 0;
+                top: auto;
                 display: flex;
                 justify-content: space-between;
                 width: 100%;
@@ -98,7 +104,7 @@
                     align-items: center;
                     justify-content: center;
                     position: absolute;
-                    bottom: 60px;
+                    bottom: 80px;
                     &:hover {
                         background-color: $primary;
                         color: $white;

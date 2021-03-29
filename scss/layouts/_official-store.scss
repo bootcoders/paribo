@@ -4,8 +4,16 @@
         background-color: $gray-300;
         border: 5px solid $white;
         border-radius: 5px;
+        overflow: hidden;
     }
     img {
         width: 100%;
+        transition: transform 0.2s ease-in-out 0s;
     }
+    &:hover{
+        img{
+            transform: scale3d(1.01, 1.01, 1.01);
+        }
+    }
+
 }

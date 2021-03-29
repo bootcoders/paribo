@@ -2,9 +2,13 @@
     border-radius: 5px;
     overflow: hidden;
     .popular_shops {
-        padding: 20px;
+        margin: 20px 0;
     }
     .popular_shop-single{
+        background-color: $white;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
         &:last-child{
             margin-bottom: -15px;
         }
@@ -33,6 +37,7 @@
         }
     }
     &--featured {
+        margin-bottom: -15px;
         &-category {
             background-color: #f7f7f7;
             border-radius: 5px;

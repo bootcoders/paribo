@@ -138,10 +138,14 @@
                 font-size: 13px;
                 line-height: 1.2;
                 text-align: center;
+                transition: transform 0.2s ease-in-out 0s;
             }
             &:hover {
                 img {
-                    transform: scale3d(1.01, 1.01, 1.01);
+                    transform: scale3d(1.03, 1.03, 1.03);
+                }
+                span{
+                    transform: scale3d(1.03, 1.03, 1.03);
                 }
             }
         }
@@ -206,4 +210,19 @@
 .popular_search--bg{
     background-color: $gray-400;
     margin: 0 0 25px 0;
+}
+
+.picup_pro{
+    background-color: $white;
+    border-radius: 5px;
+    .row{
+        padding: 0 15px;
+    }
+
+    .picup_pro--name{
+        padding: 15px 15px 0 15px;
+    }
+    .popular_search{
+        margin:15px;
+    }
 }

@@ -24,10 +24,9 @@ a {
         outline: none;
         box-shadow: none;
     }
-    
 }
-.form-control{
-    &:focus{
+.form-control {
+    &:focus {
         outline: 0;
         box-shadow: none;
         font-weight: $font-400;
@@ -47,7 +46,7 @@ body {
     background-color: $gray-300;
 }
 
-.scroll-btn{
+.scroll-btn {
     position: fixed;
     right: 50px;
     bottom: 50px;
@@ -61,16 +60,16 @@ body {
     font-size: 30px;
     color: $white;
     z-index: 9;
-    box-shadow: 0 0 10px rgba(0,0,0,0.16);
-    &:hover{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    &:hover {
         color: $white-blue;
     }
-    &.show{
+    &.show {
         display: flex;
     }
 }
 
-.btn-outline{
+.btn-outline {
     border: 1px solid $dark-blue;
     white-space: nowrap;
     border-radius: 0;
@@ -79,11 +78,37 @@ body {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
-    &:hover{
+    &:hover {
         background-color: $orange;
         border-color: $orange;
         color: $white;
     }
 }
 
+.margin_bottom_20 {
+    margin-bottom: 20px;
+}
+.margin_top_20 {
+    margin-top: 20px;
+}
 
+.hvr-grow-shadow {
+    display: inline-flex;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgb(0 0 0 / 0%);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
+}
+
+
+// .hvr-grow-shadow:hover,
+// .hvr-grow-shadow:focus,
+// .hvr-grow-shadow:active {
+//     box-shadow: 0 10px 10px -10px rgb(0 0 0 / 50%);
+//     -webkit-transform: scale(1.1);
+//     transform: scale(1.1);
+// }

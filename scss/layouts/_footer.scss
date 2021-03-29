@@ -176,6 +176,22 @@
                 width: 100%;
             }
         }
+
+        .payment-badge{
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            h3{
+                font-size:18px;
+                color: $white;
+                margin: 0;
+                font-weight: $font-400;
+            }
+            img{
+                width: 250px;
+                margin-left: 30px;
+            }
+        }
     }
     &--storeServices {
         padding: 2rem 0;

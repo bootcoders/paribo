@@ -1,34 +1,34 @@
-.product_sec{
+.product_sec {
     border-radius: 5px;
 
-    &__inner{
+    &__inner {
         background-color: $white;
         border-radius: 5px;
     }
-    
-    &--card{
+
+    &--card {
         border-radius: 5px;
         display: block;
         margin-bottom: 15px;
-       
-        transition: box-shadow 0.3 ease-in, transform 0.3s ease-in;
-        &:hover{
+        transition: box-shadow 0.3s ease-in, transform 0.3s ease-in;
+
+        &:hover {
             @include box-shadow;
             transform: scale(1.01);
         }
-        &__img{
+        &__img {
             height: 175px;
             padding: 10px 0;
             text-align: center;
             margin-bottom: 1rem;
             position: relative;
-            img{
+            img {
                 width: 100%;
                 height: 100%;
                 display: block;
                 object-fit: contain;
             }
-            .price-discount{
+            .price-discount {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -38,15 +38,15 @@
                 width: 40px;
                 height: 25px;
                 border-radius: 2px;
-                background-color: lighten($primary,  30%);
+                background-color: lighten($primary, 30%);
                 font-size: 12px;
                 font-weight: $font-500;
                 color: $primary;
             }
         }
-        &__title{
-            padding:5px 15px 15px 15px;
-            h3{
+        &__title {
+            padding: 5px 15px 15px 15px;
+            h3 {
                 font-size: 14px;
                 line-height: 1.5;
                 font-weight: $font-500;
@@ -54,7 +54,7 @@
                 color: $black;
             }
         }
-        &__price{
+        &__price {
             color: $black;
             padding: 0 15px 15px 15px;
             font-size: 12px;
@@ -64,31 +64,93 @@
             justify-content: space-between;
         }
     }
-    &--inner-flash{
+    &--inner-flash {
         padding: 0 20px;
-        .product_sec--card{
-            background-color: #F7F7F7;
-        }
     }
-    &--brand{
-        .product_sec--card{
-            &__img{
+    &--brand {
+        .product_sec--card {
+            &__img {
                 margin-bottom: 0;
             }
-            &__title{
-                padding:0 15px 15px 15px;
+            &__title {
+                padding: 0 15px 15px 15px;
                 text-align: center;
-                h3{
+                h3 {
                     text-transform: uppercase;
                 }
             }
         }
     }
-    &.product_se-item_bg{
-        .product_sec--card{
+    &.product_se-item_bg {
+        .product_sec--card {
             background-color: $white;
             display: block;
-            
+        }
+    }
+
+    .col-md-2 {
+        position: relative;
+        &:hover {
+            .product_btn {
+                opacity: 1;
+                transform: scale(1);
+            }
+            a {
+                @include box-shadow;
+                transform: scale(1.01);
+            }
+        }
+    }
+    .col-md-4 {
+        position: relative;
+
+        &:hover {
+            .product_btn {
+                opacity: 1;
+                transform: scale(1);
+            }
+            a {
+                @include box-shadow;
+                transform: scale(1.01);
+            }
+        }
+    }
+    .product_btn {
+        position: absolute;
+        z-index: 9999;
+        bottom: 20px;
+        width: 92%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 10px;
+        transform: scale(0.9);
+        background-color: $white;
+        margin-left: 8px;
+        margin-right: 8px;
+        left: 0;
+        opacity: 0;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+        
+        .btn {
+            font-size: 10px;
+            text-transform: uppercase;
+            margin: 0 4px;
+            white-space: nowrap;
+            padding: 3px 10px;
+            border-radius: 2px;
+            &-primary {
+                color: $white;
+                &:hover {
+                    background-color: transparent;
+                    color: $primary;
+                }
+            }
+            &-outline-primary {
+                &:hover {
+                    color: $white;
+                }
+            }
         }
     }
 }

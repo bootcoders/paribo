@@ -5,23 +5,39 @@
         border: 5px solid $white;
         border-radius: 5px;
         height: 200px;
+        overflow: hidden;
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.2s ease-in-out 0s;
+        }
+       
+        &:hover{
+            img{
+                transform: scale3d(1.01, 1.01, 1.01);
+            }
         }
     }
     
 }
 
+
+.sub_campain_tabs{
+    background-color: $white;
+    border-radius: 5px;
+    .pagination-sec{
+        padding: 0 20px 20px 20px;
+    }
+}
 .campain-tab{
     background-color: $white;
     padding: 15px 20px;
-    border-radius: 5px;
-    @include box-shadow;
+    border-radius: 5px 5px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid #ddd;
 
     &_btns{
         .btn{
@@ -54,7 +70,23 @@
     }
      
 
-    &_page_result{
+    &_page_search{
+        form{
+            display: flex;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            .form-control{
+                width: 250px;
+                border: none;
+                font-size: 13px;
+                padding: 8px 15px;
+                color: $black;
+                height: 38px;
+            }
+            .btn{
+                color: $gray-500;
+            }
+        }
         p{
            margin: 0;
             font-size: 14px;
@@ -62,15 +94,10 @@
     }
 }
 .sub_campain_tabs{
-    .popular_search{
-        margin: 0;
-        background-color: $gray-400;
-    }
+    
     .shop_name--shop{
-        padding: 20px 0;
-        .shop_name--shop__card{
-            background-color: $white;
-        }
+        padding: 20px;
+        
     }
     .product_sec--brand{
         .product_sec--card{

@@ -1,6 +1,5 @@
 .main {
     margin: 1rem 0;
-    padding-top: 165px;
     &--inner {
         .row {
             margin-left: -8px;
@@ -21,7 +20,7 @@
         }
 
         .section__head {
-            padding: 15px;
+            padding:13px 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
