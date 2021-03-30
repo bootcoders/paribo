@@ -67,3 +67,52 @@
     display: none;
     opacity: 0;
 }
+
+
+@media (max-width:991px){
+    .shop_name {
+        &--category {
+            padding: 20px;
+            overflow-x: scroll;
+            display: flex;
+    
+            .btn-light {
+                font-size: 14px;
+                white-space: nowrap;
+               
+            }
+
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: $white;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: $white;
+            }
+        }
+        
+        &--shop {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .shop_name {
+      
+        &--shop {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+}

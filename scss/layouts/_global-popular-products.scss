@@ -66,3 +66,23 @@
        
     }
 }
+
+
+
+@media (max-width:991px){
+    .global-popular-products{
+        border-radius: 5px;
+        // global-popular-header
+        .global-popular-header{
+            background-color: $blue;
+            position: relative;
+            .btn{
+                width: 150px;
+                font-size: 11px;
+            }
+    
+        }
+      
+    }
+    
+}

@@ -73,3 +73,19 @@
         }
     }
 }
+
+@media (max-width:991px){
+   
+    .flash-category-items{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .flash-categories-item {
+        &-img {
+            padding: 15px;
+            
+        }
+    
+    }
+}

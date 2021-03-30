@@ -82,3 +82,60 @@
         }
     }
 }
+
+@media (max-width:991px){
+    .main {
+       
+        &--inner {
+            .section__head {
+                padding:8px 12px;
+               
+                
+                h3 {
+                    font-size: 14px;
+                }
+                a {
+                    text-transform: uppercase;
+                    font-size: 10px;
+                    margin-bottom: 0;
+                    color: $black;
+                    white-space: nowrap;
+                }
+
+                &-2{
+                    h3{
+                        font-size: 20px;
+                    }
+                }
+            }
+            // full_banner
+            .banner_section {
+                .col-md-6{
+                    margin-bottom: 30px;
+                }
+                a {
+                    height: 220px;
+                    display: block;
+                    overflow: hidden;
+                    display: block;
+                    border-radius: 5px;
+                    @include box-shadow;
+                    width: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                        transform: scale(1);
+                        transition: all 0.3s ease-in;
+    
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

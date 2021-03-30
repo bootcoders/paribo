@@ -108,3 +108,46 @@
         }
     }
 }
+
+@media (max-width:991px){
+    .picup_pro{
+        &--name{
+            display: flex;
+            align-items: center;
+            overflow-x: scroll;
+            scrollbar-color: auto;
+            scrollbar-width: thin;
+            .btn{
+                max-width: 100%;
+                white-space: nowrap;
+    
+            }
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: $white;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: $white;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: $white;
+            }
+
+
+        }
+       
+        
+    } 
+}
+
+@media (min-width:768px) and (max-width:991px){
+   
+}

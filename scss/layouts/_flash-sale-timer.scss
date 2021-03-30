@@ -21,3 +21,29 @@
         }
     }
 }
+@media (max-width:991px){
+    .flash-sale-timer {
+        margin-bottom: 2rem;
+        &--inner {
+            display: flex;
+            align-items: center;
+            h3 {
+                margin: 0;
+                font-size: 16px;
+                text-transform: uppercase;
+                font-weight: $font-400;
+            }
+            .countdown {
+                font-size: 16px;
+                font-weight: $font-700;
+                color: $red;
+                margin-left: 10px;
+                white-space: nowrap;
+                small{
+                    font-weight: $font-700;
+                    font-size: 18px;
+                }
+            }
+        }
+    }  
+}

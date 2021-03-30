@@ -256,3 +256,52 @@
         }
     }
 }
+
+
+@media (max-width:991px){
+    .services-section{
+        .service_inner{
+            h3{
+                font-size: 20px;
+            }
+        }
+        
+    
+    }
+    
+    .service_shipments{
+        .shipment_slider{
+            &--card{
+                padding:15px 10px;
+                h3{
+                    font-size: 12px;
+                    white-space: nowrap;
+                    align-items: center;
+                   
+                }
+            }
+        }
+    }
+    
+    
+    .percel-document{
+        .percel_doc--card{
+            padding: 10px 0;
+            h3{
+                font-size: 18px;
+            }
+            p{
+                padding-right: 50px;
+            }
+        }
+    }
+    
+   
+    
+    .services-opt{
+        .services-opt__card{
+            margin-bottom: 30px;
+            
+        }
+    }
+}

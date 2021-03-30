@@ -70,3 +70,24 @@
         }
     }
 }
+
+
+@media (max-width:991px){
+    .top-ranking-products {
+        
+    
+        .top-rank-products {
+            margin-bottom: 30px;
+            h3 {
+                font-size: 16px;
+                font-weight: $font-500;
+                margin-bottom: 20px;
+            }
+        }
+       
+    }  
+}
+
+@media (min-width:768px) and (max-width:991px){
+   
+}

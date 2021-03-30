@@ -1,4 +1,52 @@
 .live_offer {
+
+    &--head{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 5px;
+        .live-badge {
+            font-size: 10px;
+            text-transform: uppercase;
+            background-color: $primary;
+            color: $white;
+            width: 70px;
+            height: 24px;
+            text-align: center;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .countdown {
+            .ended{
+                h3{
+                    font-size: 14px;
+                    margin: 0;
+                    padding: 8px 0;
+                    color: $red;
+                }
+            }
+        }
+        .running {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+           
+            span {
+                background-color: $white;
+                font-weight: $font-500;
+                font-size: 16px;
+                padding: 5px 10px;
+                border-radius: 5px;
+                display: inline-block;
+                color: $red;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+        }
+    }
     &--card {
         display: flex;
         background-color: $white;
@@ -29,22 +77,7 @@
             padding: 20px;
             position: relative;
 
-            .live-badge {
-                font-size: 10px;
-                text-transform: uppercase;
-                background-color: $pink;
-                color: $white;
-                width: 70px;
-                height: 24px;
-                text-align: center;
-                border-radius: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
+            
             h3 {
                 font-size: 18px;
                 text-transform: uppercase;
@@ -55,47 +88,7 @@
                 color: $primary;
                 margin: 0 0 15px 0;
             }
-            .countdown {
-                border: 2px solid $primary;
-                position: relative;
-                padding: 15px;
-                border-radius: 3px;
-                margin-top: 20px;
-                p {
-                    font-size: 12px;
-                    font-weight: $font-600;
-                    position: absolute;
-                    padding: 0px 15px;
-                    background-color: #fff;
-                    top: -14px;
-                    left: 5px;
-                    margin: 0;
-                }
-                .ended{
-                    h3{
-                        font-size: 14px;
-                        margin: 0;
-                        padding: 8px 0;
-                        color: $red;
-                    }
-                }
-            }
-            .running {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-               
-               
-                span {
-                    background-color: $gray-200;
-                    font-weight: $font-500;
-                    font-size: 16px;
-                    padding: 5px 10px;
-                    border-radius: 5px;
-                    display: inline-block;
-                    color: $red;
-                }
-            }
+            
         }
     }
 }

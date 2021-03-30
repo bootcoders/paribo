@@ -120,3 +120,81 @@
         }
     }
 }
+
+@media (max-width:991px){
+    .popular_cat {
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .popular_cat-item{
+            margin-bottom: 0;
+        }
+    
+        .owl-theme {
+            .owl-nav {
+                top: auto;
+                bottom: 0;
+                [class*="owl-"] {
+                    position: absolute;
+                    bottom: 80px;
+                }
+                .owl-prev {
+                    margin-left: -10px;
+                    left: 0;
+                }
+                .owl-next {
+                    margin-right: -10px;
+                    right: 0;
+                }
+            }
+        }
+    
+        .owl-scrollbar {
+            opacity: 0;
+            display: none;
+        }
+        
+        &--subcampain {
+            .popular_cat--items {
+                background-color: transparent;
+            }
+            .owl-theme {
+                .owl-nav {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    top: auto;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    [class*="owl-"] {
+                        color: $gray-600;
+                        font-size: 40px;
+                        background-color: $gray-400;
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: absolute;
+                        bottom: 80px;
+                        &:hover {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+                    .owl-prev {
+                        left: 0;
+                    }
+                    .owl-next {
+                        right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}

@@ -144,7 +144,7 @@
                 img {
                     transform: scale3d(1.03, 1.03, 1.03);
                 }
-                span{
+                span {
                     transform: scale3d(1.03, 1.03, 1.03);
                 }
             }
@@ -201,28 +201,253 @@
 }
 
 // product_sec--topSale
-.product_sec--topSale{
-    .product_sec--card{
+.product_sec--topSale {
+    .product_sec--card {
         background-color: $white;
     }
 }
 
-.popular_search--bg{
+.popular_search--bg {
     background-color: $gray-400;
     margin: 0 0 25px 0;
 }
 
-.picup_pro{
+.picup_pro {
     background-color: $white;
     border-radius: 5px;
-    .row{
+    .row {
         padding: 0 15px;
     }
 
-    .picup_pro--name{
+    .picup_pro--name {
         padding: 15px 15px 0 15px;
     }
-    .popular_search{
-        margin:15px;
+    .popular_search {
+        margin: 15px;
+    }
+}
+
+@media (max-width: 991px) {
+    // product_daily
+    .product_daily {
+        &--item {
+            margin-bottom: 0px;
+
+            img {
+                width: 100%;
+            }
+        }
+        .row {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            scrollbar-color: auto;
+            scrollbar-width: thin;
+
+            .col-md-3 {
+                flex: none;
+                max-width: 60%;
+            }
+
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f5f5f5;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #f5f5f5;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #f5f5f5;
+            }
+        }
+    }
+    .deal_product{
+        display: flex;
+        justify-content: space-around;
+
+    }
+    .offer_item {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .top_selling_groceries {
+        .owl-carousel .owl-stage {
+            padding-left: 0 !important;
+        }
+    
+        .top_selling_groceries_item {
+            a {
+                height: 150px;
+    
+               
+                h3 {
+                    top: 30px;
+                    
+                }
+                
+            }
+        }
+        .top_selling_groceries_item_group {
+            
+            .top_selling_groceries_item-sm {
+                height: 100px;
+    
+                .item_img {
+                    height: 60px;
+                   
+                }
+                span {
+                    display: block;
+                    max-width: 80%;
+                    font-size: 11px;
+                }
+                &:hover {
+                    img {
+                        transform: scale3d(1.03, 1.03, 1.03);
+                    }
+                    span {
+                        transform: scale3d(1.03, 1.03, 1.03);
+                    }
+                }
+            }
+        }
+        .owl-theme {
+            .owl-stage-outer {
+                padding-bottom: 10px;
+            }
+            .owl-nav {
+                
+                .owl-next {
+                    position: absolute;
+                    right: -5px;
+                }
+                .owl-prev {
+                    position: absolute;
+                    left: -5px;
+                }
+            }
+        }
+    }
+
+
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    // product_daily
+    .product_daily {
+        &--item {
+            margin-bottom: 0px;
+
+            img {
+                width: 100%;
+            }
+        }
+        .row {
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+            scrollbar-color: auto;
+            scrollbar-width: thin;
+
+            .col-md-3 {
+                flex: none;
+                max-width: 40%;
+            }
+
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #f5f5f5;
+            }
+
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #f5f5f5;
+            }
+
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: #f5f5f5;
+            }
+        }
+    }
+    .deal_product{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .offer_item {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .top_selling_groceries {
+        .owl-carousel .owl-stage {
+            padding-left: 0 !important;
+        }
+    
+        .top_selling_groceries_item {
+            a {
+                height: 150px;
+    
+               
+                h3 {
+                    top: 30px;
+                    
+                }
+                
+            }
+        }
+        .top_selling_groceries_item_group {
+            
+            .top_selling_groceries_item-sm {
+                height: 100px;
+    
+                .item_img {
+                    height: 60px;
+                   
+                }
+                span {
+                    display: block;
+                    max-width: 80%;
+                    font-size: 11px;
+                }
+                &:hover {
+                    img {
+                        transform: scale3d(1.03, 1.03, 1.03);
+                    }
+                    span {
+                        transform: scale3d(1.03, 1.03, 1.03);
+                    }
+                }
+            }
+        }
+        .owl-theme {
+            .owl-stage-outer {
+                padding-bottom: 10px;
+            }
+            .owl-nav {
+                
+                .owl-next {
+                    position: absolute;
+                    right: -5px;
+                }
+                .owl-prev {
+                    position: absolute;
+                    left: -5px;
+                }
+            }
+        }
     }
 }

@@ -11,6 +11,11 @@ $(document).ready(function () {
     $(function () {
         $('.picup_pro_items').mixitup();
     });
+     // picup_pro_items
+     $(function () {
+        $('.grid-product .row').mixitup();
+    });
+   
 
     // Home Page Banner ads Slider
     $('#home-banner').owlCarousel({
@@ -21,7 +26,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false,
+                stagePadding:20,
+                margin:10,
             },
             600: {
                 items: 1
@@ -60,31 +68,14 @@ $(document).ready(function () {
                 items: 1
             },
             600: {
-                items: 1
+                items: 2
             },
             1000: {
                 items: 4
             }
         }
     });
-    // Home Page Banner ads Slider
-    $('#essentials_deals_slider_2').owlCarousel({
-        loop: false,
-        margin: 10,
-        nav: false,
-        dots: false,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 1
-            },
-            1000: {
-                items: 4
-            }
-        }
-    });
+   
     // Home Page Banner ads Slider
     $('#top_selling_groceries').owlCarousel({
         loop: true,
@@ -95,7 +86,8 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                stagePadding: 20,
             },
             600: {
                 items: 1
@@ -114,10 +106,11 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 3
+                items: 2,
+                nav: true,
             },
             600: {
-                items: 5
+                items: 3
             },
             1000: {
                 items: 5
@@ -134,10 +127,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 3
+                items: 2
             },
-            600: {
-                items: 5
+            767: {
+                items: 4
             },
             1000: {
                 items: 5
@@ -159,7 +152,7 @@ $(document).ready(function () {
                 items: 1
             },
             600: {
-                items: 1
+                items: 2
             },
             1000: {
                 items: 7
@@ -176,10 +169,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
-            600: {
-                items: 1
+            767: {
+                items: 3
             },
             1000: {
                 items: 5
@@ -198,8 +191,8 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
-                items: 1
+            767: {
+                items: 3
             },
             1000: {
                 items: 5
@@ -216,10 +209,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             600: {
-                items: 1
+                items: 4
             },
             1000: {
                 items: 6
@@ -238,10 +231,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
-            600: {
-                items: 1
+            767: {
+                items: 3
             },
             1000: {
                 items: 6
@@ -296,8 +289,8 @@ $(document).ready(function () {
             0: {
                 items: 1
             },
-            600: {
-                items: 1
+            767: {
+                items: 2
             },
             1000: {
                 items: 5
@@ -315,10 +308,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 3
             },
-            600: {
-                items: 1
+            767: {
+                items: 5
             },
             1000: {
                 items: 12
@@ -335,10 +328,10 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items:2
             },
-            600: {
-                items: 1
+            767: {
+                items:4
             },
             1000: {
                 items: 7
@@ -377,11 +370,12 @@ $(document).ready(function () {
         responsiveRefreshRate: 100,
         responsive: {
             0: {
-                items: 2,
+                items: 4,
                 margin: 5
             },
-            600: {
-                items: 2
+            767: {
+                items: 4,
+                margin: 5
             },
             1000: {
                 items: 4

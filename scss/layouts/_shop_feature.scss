@@ -22,7 +22,7 @@
     }
 
     .owl-theme {
-        .owl-stage-outer{
+        .owl-stage-outer {
             padding-bottom: 10px;
         }
         .owl-nav {
@@ -70,12 +70,42 @@
             }
         }
     }
-    &:hover{
+    &:hover {
         .owl-theme {
-            .owl-nav{
+            .owl-nav {
                 opacity: 1;
             }
-            
         }
+    }
+}
+
+@media (max-width: 991px) {
+    .shop_feature {
+        &--card {
+            &__title {
+                h3 {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .owl-theme {
+            .owl-nav {
+                opacity: 1;
+                [class*="owl-"] {
+                    &:focus {
+                        background-color: transparent;
+                    }
+                    i {
+                        
+                        &:focus {
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+                }
+            }
+        }
+        
     }
 }
