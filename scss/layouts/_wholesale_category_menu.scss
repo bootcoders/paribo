@@ -13,7 +13,17 @@
         text-transform: uppercase;
         padding: 5px 30px;
         margin: 0 0 10px 0;
+        i{
+            margin-right: 10px;
+        }
+        .arrow_right{
+            display: none;
+        }
     }
+    .wholesale_menu{
+        display: block;
+    }
+
     ul {
         > li {
             display: block;
@@ -27,6 +37,9 @@
                 line-height: 1.2;
                 &:hover {
                     color: $primary;
+                }
+                span{
+                    display: none;
                 }
             }
 
@@ -78,4 +91,101 @@
     }
 
 
+}
+
+@media (max-width:991px){
+    .wholesale_category_menu{
+        min-height: inherit;
+       
+        h3 {
+            margin:0;
+            padding: 5px 20px;
+            display: flex;
+            align-items: center;
+            .arrow_right{
+                display: inline-block;
+                margin-left: auto;
+            }
+        }
+        .wholesale_menu{
+            margin-top: 20px;
+            display: none;
+        }
+    
+        ul {
+            > li {
+                display: block;
+    
+                > a {
+                    display: flex;
+                    justify-content: space-between;
+                    color: $black;
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    line-height: 1.2;
+                    background-color: $gray-100;
+                    margin: 5px 20px;
+                    &:hover {
+                        color: $primary;
+                    }
+                    span{
+                        display: block;
+                        i{
+                            color: $gray-500;
+                        }
+                    }
+                }
+                &:hover {
+                    .wholesale_category__megamenu {
+                        display: none;
+                    }
+                }
+                .wholesale_category__megamenu {
+                    position: static;
+                    min-width: inherit;
+                    background-color: $gray-200;
+                    border-radius:0px;
+                    border: none;
+                    height: auto;
+                    display:block;
+                    width: 90%;
+                    margin: 10px auto;
+                    display: none;
+                    &.show{
+                        display: block;
+                    }
+                   
+                    a {
+                        padding: 5px 0;
+                        color: #75757a;
+                        font-size: 0.75rem;
+                        line-height: 1.2;
+                        margin: 0 !important;
+                        background-color: transparent !important;
+                        &:hover {
+                            color: $black;
+                        }
+                    }
+    
+                    h4 {
+                        font-size: 0.75rem;
+                        color: $black;
+                        text-transform: uppercase;
+                        font-weight: $font-500;
+                        border-bottom: 1px solid #ddd;
+                        padding-bottom: 8px;
+                    }
+                }
+               
+            }
+        }
+    
+        .btn-link{
+            font-size: 14px;
+            padding-left: 30px;
+        }
+    
+    
+    }
+      
 }

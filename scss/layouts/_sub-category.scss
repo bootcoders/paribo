@@ -14,6 +14,7 @@
             text-transform: uppercase;
             padding: 5px 30px;
             margin: 0;
+            span{display: none;}
         }
         ul {
             > li {
@@ -292,18 +293,29 @@
             border-radius: 5px;
             padding: 20px 0;
             position: relative;
-            min-height: 345px;
+            min-height: inherit;
             @include box-shadow;
             &--big {
                 min-height: 460px;
             }
             h3 {
                 font-size: 18px;
+                line-height: 1;
                 text-transform: uppercase;
                 padding: 5px 30px;
                 margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                span{
+                    display: block;
+                }
             }
             ul {
+                display: none;
+                &.sub_menu_list.show{
+                    display: block;
+                }
                 > li {
                     display: block;
 
