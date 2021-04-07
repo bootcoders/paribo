@@ -75,7 +75,9 @@
 @media (max-width:991px){
     .top-ranking-products {
         
-    
+        .top-rank-product-list {
+            border-right: none;
+        }
         .top-rank-products {
             margin-bottom: 30px;
             h3 {
@@ -89,5 +91,12 @@
 }
 
 @media (min-width:768px) and (max-width:991px){
-   
+    .top-ranking-products {
+        
+        .top-rank-product-list {
+            border-right: 1px solid #ddd;
+        }
+        
+       
+    } 
 }

@@ -28,11 +28,13 @@ $(document).ready(function () {
             0: {
                 items: 1,
                 nav: false,
-                stagePadding: 20,
-                margin: 10,
+                margin: 0,
+                autoplay: true
             },
             600: {
-                items: 1
+                items: 1,
+                margin: 0,
+                autoplay: true
             },
             1000: {
                 items: 1
@@ -106,10 +108,20 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 2,
-                nav: true,
+                items: 1,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 8000,
+                autoplayHoverPause: false
             },
-            600: {
+            430: {
+                items: 2,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 8000,
+                autoplayHoverPause: false
+            },
+            767: {
                 items: 3
             },
             1000: {
@@ -133,6 +145,9 @@ $(document).ready(function () {
                 items: 4
             },
             1000: {
+                items: 4
+            },
+            1200: {
                 items: 5
             }
         }
@@ -149,10 +164,28 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 1,
+                nav: false,
+                autoplay:true,
+                autoplayTimeout: 8000,
+                autoplayHoverPause: false
+
             },
             600: {
-                items: 2
+                items: 1,
+                nav: false,
+                autoplay:true,
+                autoplayTimeout: 8000,
+                autoplayHoverPause: false
+
+            },
+            767: {
+                items: 2,
+                nav: false,
+                autoplay:true,
+                autoplayTimeout: 8000,
+                autoplayHoverPause: false
+
             },
             1000: {
                 items: 7
@@ -162,6 +195,25 @@ $(document).ready(function () {
 
     // flash-categories
     $('#flash-categories').owlCarousel({
+        loop: true,
+        margin: 2,
+        nav: true,
+        dots: false,
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            767: {
+                items: 2
+            },
+            1000: {
+                items: 5
+            }
+        }
+    });
+    // flash-categories
+    $('#flash-categories-2').owlCarousel({
         loop: true,
         margin: 2,
         nav: true,
@@ -189,7 +241,7 @@ $(document).ready(function () {
         navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
         responsive: {
             0: {
-                items: 1
+                items: 2
             },
             767: {
                 items: 3
@@ -232,6 +284,27 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 2
+            },
+            767: {
+                items: 3
+            },
+            1000: {
+                items: 6
+            }
+        }
+    });
+    // sub-category
+    $('#sub-category-2').owlCarousel({
+        loop: true,
+        margin: 5,
+        nav: true,
+        dots: false,
+        scrollbarType: "scroll",
+        navText: ['<i class="fal fa-angle-left"></i>', '<i class="fal fa-angle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
             },
             767: {
                 items: 3
@@ -293,6 +366,9 @@ $(document).ready(function () {
                 items: 2
             },
             1000: {
+                items: 4
+            },
+            1200: {
                 items: 5
             }
         }
@@ -314,6 +390,9 @@ $(document).ready(function () {
                 items: 5
             },
             1000: {
+                items: 7
+            },
+            1200: {
                 items: 12
             }
         }
@@ -626,6 +705,10 @@ $(document).ready(function () {
         $(".mobile_nav_close").click(function () {
             $(".header--main").removeClass('show');
         });
+    });
+
+    $(".open_login").click(function () {
+        $(".login_dropdown").toggleClass('show');
     });
 
     // Flash sale timerr

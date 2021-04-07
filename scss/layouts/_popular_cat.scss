@@ -134,6 +134,7 @@
     
         .owl-theme {
             .owl-nav {
+                display: none;
                 top: auto;
                 bottom: 0;
                 [class*="owl-"] {
@@ -197,4 +198,19 @@
         }
     }
     
+}
+
+
+@media (min-width:310px) and (max-width:360px){
+    .popular_cat {
+      
+        .popular_cat-item {
+            &_img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    
+    
+    }
 }

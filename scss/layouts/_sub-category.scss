@@ -378,6 +378,7 @@
                 min-height: 180px;
 
                 ul {
+                    display: flex;
                     li {
                         width: 20%;
                         border-bottom: 1px solid #ddd;
@@ -421,6 +422,7 @@
 
             .owl-theme {
                 .owl-nav {
+                    opacity: 0;
                     top: auto;
                     bottom: 0;
                     left: 0;
@@ -439,6 +441,7 @@
             &--2row {
                 .owl-theme {
                     .owl-nav {
+                        opacity: 0;
                         top: auto;
                         bottom: 0;
                     }
@@ -458,22 +461,25 @@
             display: block;
             border-right: none;
             border-bottom: 1px solid #ddd;
+            h3{
+                margin-top: 15px;
+            }
+        }
+        .cat_pro_product {
+            
+            h3 {
+                margin-bottom: 25px;
+            }
+            
         }
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
     .sub-category {
         .sub-category-menu {
+            min-height: inherit;
+            margin-bottom: 15px;
            
-            background-color: $white;
-            border-radius: 5px;
-            padding: 20px 0;
-            position: relative;
-            min-height: 345px;
-            @include box-shadow;
-            &--big {
-                min-height: 460px;
-            }
             h3 {
                 font-size: 18px;
                 text-transform: uppercase;
@@ -623,5 +629,42 @@
             }
             
         }
+    }
+}
+
+
+@media (min-width:992px) and (max-width:1200px) {
+    .sub-category {
+        .sub-category-menu {
+            
+            &--box {
+                min-height: 415px;
+    
+                ul {
+                    li {
+                       
+                        a {
+                            
+                            height: 81px;
+                            
+                        }
+                    }
+                }
+            }
+        }
+        .subcategory-slider {
+            padding: 31px 50px;
+    
+           
+        }
+        
+    }
+    .cateogry-with-products {
+        .cat_pro__item {
+           
+            height: 320px;
+            
+        }
+       
     }
 }

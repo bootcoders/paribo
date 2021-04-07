@@ -63,7 +63,6 @@
 @media (max-width: 991px) {
     .best_deals {
         
-    
         &--content {
             h3 {
                 font-size: 16px;
@@ -96,5 +95,20 @@
                 border-radius: 5px 5px 0 0;
             }
         }
+    }
+}
+
+@media (min-width:992px) and (max-width:1200px) {
+    .best_deals {
+        
+        &--content {
+            
+            .btn {
+                width: 100%;
+               
+            }
+        }
+        
+       
     }
 }

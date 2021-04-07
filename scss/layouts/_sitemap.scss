@@ -1,6 +1,7 @@
 .categories-sitemap{
     padding: 0;
     overflow: visible;
+    margin-bottom: 15px;
     .flash-categories-item{
         display: block;
         background-color: $white;
@@ -35,6 +36,9 @@
 }
 
 @media (max-width:991px){
+    .categories-sitemap{
+        margin-bottom: 15px;
+    }
     .site-map{
         ul{
             margin-bottom: 15px;

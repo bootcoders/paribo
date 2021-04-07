@@ -8,6 +8,26 @@
     &--top {
         background-color: $white-blue;
         padding: 3px 0;
+        .row {
+            align-items: center;
+        }
+        .row {
+            margin-left: -8px;
+            margin-right: -8px;
+        }
+        .no-gutters {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .no-gutters > .col,
+        .no-gutters > [class*="col-"] {
+            padding-right: 0;
+            padding-left: 0;
+        }
+        [class*="col"] {
+            padding-right: 8px;
+            padding-left: 8px;
+        }
         // Left
         &__left {
             ul {
@@ -67,6 +87,7 @@
                     background: #5774e6;
                     color: $white;
                     border-color: #5774e6;
+                    white-space: nowrap;
                     &:hover {
                         background-color: $primary;
                         border-color: $primary;
@@ -256,6 +277,7 @@
             .btn {
                 padding-top: 0;
                 padding-bottom: 0;
+               
                 span {
                     display: block;
                     font-size: 12px;
@@ -360,6 +382,7 @@
                         }
                     }
                 }
+
                 &:hover {
                     .login_dropdown {
                         display: block;
@@ -589,7 +612,107 @@
         z-index: 999;
     }
 }
-
+@media (min-width:992px) and (max-width:1200px) {
+    .header {
+      
+        &--middle {
+            // Header
+            &__search {
+                form {
+                    width: 92%;
+                    
+                }
+            }
+    
+           
+        }
+    
+        // Header Main
+        &--main {
+          
+    
+            .main_nav {
+                display: block;
+    
+                .main-ul {
+                    > li {
+                        display: inline-block;
+                        margin-right: 10px;
+                        .icon_right {
+                            display: none;
+                        }
+                        > a {
+                            display: block;
+                            color: $black;
+                            padding: 20px 0;
+                            position: relative;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0px;
+                                right: 0px;
+                                height: 2px;
+                                width: 0px;
+                                background-color: $primary;
+                                transition: all 0.3s ease 0s;
+                                margin: auto;
+                            }
+                        }
+                        &:hover {
+                            .mega_menu {
+                                display: block;
+                            }
+                            > a {
+                                &::after {
+                                    width: 100%;
+                                }
+                            }
+                        }
+    
+                        .mega_menu {
+                            position: absolute;
+                            left: 1%;
+                            top: 100%;
+                            background-color: $white;
+                            width: 98%;
+                            height: 70vh;
+                            z-index: 9999;
+                            display: none;
+    
+                            &--inner {
+                                padding: 30px;
+                            }
+                            &--card {
+                                margin-bottom: 20px;
+                                h3 {
+                                    font-size: 14px;
+                                    line-height: 1.2;
+                                    margin-bottom: 0px;
+                                    opacity: 0.8;
+                                }
+                                ul {
+                                    li {
+                                        display: block;
+                                        a {
+                                            display: block;
+                                            font-size: 13px;
+                                            color: $black;
+                                            opacity: 0.8;
+                                            &:hover {
+                                                opacity: 1;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 991px) {
     .header {
         // Header Top
@@ -606,6 +729,23 @@
             padding: 20px 0 0 0;
             .row {
                 align-items: center;
+            }
+            .row {
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+            .no-gutters {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .no-gutters > .col,
+            .no-gutters > [class*="col-"] {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            [class*="col"] {
+                padding-right: 8px;
+                padding-left: 8px;
             }
             .open_mobile_menu {
                 display: inline-block;
@@ -728,8 +868,17 @@
                     }
                 }
                 .btn-login {
+                    
+                    &:hover {
+                        .login_dropdown {
+                            display: none;
+                        }
+                    }
                     .login_dropdown {
                         left: -65px;
+                        &.show{
+                            display: block;
+                        }
                     }
                 }
             }
@@ -1033,4 +1182,31 @@
             }
         }
     }
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .header {
+       
+
+        &--middle {
+            .open_mobile_menu {
+                display: inline-block;
+                .btn {
+                    margin-right: 5px;
+                }
+            }
+
+           
+
+            // __shop-info
+            &__shop-info {
+                .btn {
+                    padding: 0 7px;
+                }
+               
+            }
+        }
+
+    }
+
 }

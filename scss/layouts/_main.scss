@@ -87,8 +87,25 @@
     .main {
        
         &--inner {
+            .row {
+                margin-left: -8px;
+                margin-right: -8px;
+            }
+            .no-gutters {
+                margin-left: 0;
+                margin-right: 0;
+            }
+            .no-gutters > .col,
+            .no-gutters > [class*="col-"] {
+                padding-right: 0;
+                padding-left: 0;
+            }
+            [class*="col"] {
+                padding-right: 8px;
+                padding-left: 8px;
+            }
             .section__head {
-                padding:8px 12px;
+                padding:10px 12px;
                
                 
                 h3 {

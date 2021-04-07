@@ -111,6 +111,12 @@
 
 @media (max-width:991px){
     .picup_pro{
+        &--card{
+            height:150px;
+            h3{
+                font-size: 12px;
+            }
+        }
         &--name{
             display: flex;
             align-items: center;

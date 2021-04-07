@@ -328,7 +328,7 @@
                 }
                 img {
                     width: 250px;
-                    margin-left: 30px;
+                    margin-left: 0px;
                 }
             }
         }
@@ -482,3 +482,67 @@
     
 }
 
+
+
+@media (min-width:992px) and (max-width:1200px){
+    .footer {
+        
+        &--storeInfo {
+           
+            .subscibe-section {
+               
+                h3 {
+                    font-size: 16px;
+                    
+                }
+                form {
+                    .form-control {
+                        width: 200px;
+                    }
+                    
+                }
+            }
+            
+    
+            
+        }
+        
+    }
+    
+}
+
+@media (min-width:310px) and (max-width:360px){
+    .footer {
+        
+        &--storeInfo {
+           
+            &__btn {
+                
+                .btn{
+                    width: 100px;
+                }
+                .change-curreny {
+                    position: relative;
+                    .currency-list {
+                        width: 100px;
+                    }
+                   
+                }
+               
+            }
+    
+            .subscibe-section {
+                form {
+                    .form-control {
+                        width:200px;
+                    }
+                    
+                }
+            }
+            
+    
+            
+        }
+        
+    }
+}
