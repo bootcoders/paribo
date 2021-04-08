@@ -112,14 +112,8 @@ $(document).ready(function () {
                 nav: false,
                 autoplay: true,
                 autoplayTimeout: 8000,
-                autoplayHoverPause: false
-            },
-            430: {
-                items: 2,
-                nav: false,
-                autoplay: true,
-                autoplayTimeout: 8000,
-                autoplayHoverPause: false
+                autoplayHoverPause: false,
+                autoWidth:true
             },
             767: {
                 items: 3

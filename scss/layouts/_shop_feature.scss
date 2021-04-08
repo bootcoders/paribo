@@ -83,7 +83,7 @@
 @media (max-width: 991px) {
     .shop_feature {
         &--card {
-            
+            padding: 10px 15px;
             &__title {
                 h3 {
                     white-space: nowrap;
@@ -95,47 +95,15 @@
         .owl-theme {
             .owl-nav {
                 opacity: 0;
-                [class*="owl-"] {
-                    &:focus {
-                        background-color: transparent;
-                    }
-                    i {
-                        
-                        &:focus {
-                            background-color: $primary;
-                            color: $white;
-                        }
-                    }
+            }
+        }
+        &:hover {
+            .owl-theme {
+                .owl-nav {
+                    opacity: 0;
                 }
             }
         }
-        
-    }
-}
-@media (min-width:430px) and (max-width:767px){
-    .shop_feature {
-        padding: 0 20px;
-        &--card {
-            margin: 0 10px;
-            &__title {
-                h3 {
-                    white-space: nowrap;
-                    font-size: 14px;
-                }
-            }
-        }
-        .owl-theme {
-           
-            .owl-nav {
-                .owl-next {
-                    right: -40px;
-                }
-                .owl-prev {
-                    left: -40px;
-                }
-            }
-        }
-
         
     }
 }
@@ -150,19 +118,16 @@
                 }
             }
         }
-
-        
     }
 }
+
+
 @media (min-width:992px) and (max-width:1200px){
     .shop_feature {
         padding: 0px;
-        
         .owl-theme {
-           
             .owl-nav {
                 opacity: 1;
-                
             }
         }
     }
