@@ -1,36 +1,6 @@
 .best_deals {
     background-color: $white;
     border-radius: 5px;
-
-    &--content {
-        text-align: center;
-        padding: 0 15px;
-        background-color: $orange;
-        color: $white;
-        min-height: 180px;
-        border-radius: 5px 0 0 5px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-
-        h3 {
-            font-size: 20px;
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
-        }
-        .btn {
-            width: 80%;
-            &.btn-outline {
-                color: $white;
-                border-color: $white;
-                &:hover {
-                    background-color: $white;
-                    color: $black;
-                }
-            }
-        }
-    }
     &--banner {
         background-color: $gray-200;
         height: 180px;
@@ -51,64 +21,8 @@
             }
         }
     }
-    .no-gutters {
-        .best_deals--banner {
-            border-radius: 0 5px 5px 0;
-        }
-    }
+    
 }
 
 
 
-@media (max-width: 991px) {
-    .best_deals {
-        
-        &--content {
-            h3 {
-                font-size: 16px;
-            }
-            .btn {
-                width: 100%;
-               
-            }
-        }
-        
-       
-    }
-}
-@media (max-width: 767px) {
-    .best_deals {
-        .row {
-            flex-direction: column-reverse;
-        }
-        &--content {
-            border-radius: 0 0 5px 5px;
-        }
-        &--banner {
-            height: 220px;
-            border-radius: 5px 5px 0 0;
-            box-shadow: none;
-           
-        }
-        .no-gutters {
-            .best_deals--banner {
-                border-radius: 5px 5px 0 0;
-            }
-        }
-    }
-}
-
-@media (min-width:992px) and (max-width:1200px) {
-    .best_deals {
-        
-        &--content {
-            
-            .btn {
-                width: 100%;
-               
-            }
-        }
-        
-       
-    }
-}
